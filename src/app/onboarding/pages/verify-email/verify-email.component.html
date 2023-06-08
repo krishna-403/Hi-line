@@ -1,0 +1,28 @@
+<div class="login-form">
+
+    <div class="login">
+
+        <div>
+            <h2 class="login-txt">
+                Verify Email </h2>
+            <div class="return-login">
+
+                <p class="verify-txt">Enter six digit Verification code sent </p>
+                <p class="verify-txt">on your registered email</p>
+
+            </div>
+        </div>
+
+        <form [formGroup]="verify" (ngSubmit)="verifyCode()" class="login-form-1">
+
+            <label class="form-label" for="">Verification Code*</label>
+            <input class="form-input" type="text" name="" placeholder="Enter company code" formControlName="code" />
+            <span class="error-msg" *ngIf="code && code.invalid && code.touched">Invalid code</span>
+
+            <button type="submit" class="login-button">Continue</button>
+
+        </form>
+
+    </div>
+
+</div>

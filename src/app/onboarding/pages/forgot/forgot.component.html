@@ -1,0 +1,40 @@
+<div class="login-form">
+
+    <div class="login">
+
+        <div>
+            <h2 class="login-txt">
+                Forgot Password
+            </h2>
+        </div>
+
+        <form [formGroup]="forgotForm" (ngSubmit)="forgot_p()" class="login-form-1">
+
+            <label class="form-label" for="">Company Code*</label>
+            <input class="form-input" type="text" name="" placeholder="Enter company code"
+                formControlName="companyCode" />
+            <span class="error-msg" *ngIf="companyCode && companyCode.invalid && companyCode.touched">Invalid company
+                code</span>
+
+
+            <label class="form-label" for="">Registered Email*</label>
+            <input class="form-input" type="text" name="" placeholder="Enter email/employee id"
+                formControlName="email" />
+
+            <span class="error-msg" *ngIf="email && email.invalid && email.touched">Email is required</span>
+
+
+            <button type="submit" class="login-button">Continue</button>
+
+            <div class="return-login">
+                <p class="return-txt">Return to <span class="return-txt-login" routerLink="/">Login</span> </p>
+
+            </div>
+
+
+
+        </form>
+
+    </div>
+
+</div>

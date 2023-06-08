@@ -1,0 +1,41 @@
+<div class="login-form">
+
+    <div class="login">
+
+        <div>
+            <h2 class="login-txt">
+                Login
+            </h2>
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()" class="login-form-1">
+
+            <label class="form-label" for="">Company Code*</label>
+            <input class="form-input" type="text" name="" placeholder="Enter company code" formControlName="user" />
+            <span class="error-msg" *ngIf="user && user.invalid && user.touched">Invalid company code</span>
+
+            <label class="form-label" for="">Email/Employee ID*</label>
+            <input class="form-input" type="text" name="" placeholder="Enter email/employee id"
+                formControlName="email" />
+            <span class="error-msg" *ngIf="email && email.invalid && email.touched">Invalid email/employee id</span>
+
+
+            <label class="form-label" for="">Password*</label>
+            <input class="form-input" type="text" name="" placeholder="Enter password" formControlName="password" />
+            <span class="error-msg" *ngIf="password && password.invalid && password.touched">Invalid password</span>
+
+            <div class="remember-me">
+                <div class="check-box">
+                    <input type="checkbox" />
+                    <span class="remem-txt">Remember me</span>
+                </div>
+                <div class="forgot-password">
+                    <p routerLink="/forgot">Forgot-password</p>
+                </div>
+            </div>
+            <button class="login-button">LOGIN</button>
+        </form>
+
+    </div>
+
+</div>
