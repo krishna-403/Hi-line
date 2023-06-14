@@ -4,9 +4,15 @@
 
 @import "./scss/components/variables.scss";
 
-@import "./scss/components/pages/landing-page.scss";
+// @import "./scss/components/pages/landing-page.scss";
+@import "../assets/pages/landing-page.scss";
 
 @import "./scss/components/forms.scss";
  
-@import "./scss/components/pages/forgot-page.scss";
-@import "./scss/components/pages/verify-email.scss";
+// @import "./scss/components/pages/forgot-page.scss";
+@import  "../assets/pages/forgot-page.scss";
+// @import "./scss/components/pages/verify-email.scss";
+@import "../assets/pages/verify-email.scss";
+@import "../assets/pages/nav.scss";
+@import "../assets/pages/side-bar.scss";
+@import "../assets/pages/footer-page.scss", "../assets/pages/main-page.scss", "../assets/pages/inventory-log.scss"

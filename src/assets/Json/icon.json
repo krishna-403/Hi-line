@@ -1,0 +1,32 @@
+[
+    {
+    "id": 1,
+    "active":"/assets/images/active-icons/Inventory.svg",
+    "inactive":"/assets/images/inactive-icons/Inventory.svg"
+    },
+
+    {
+    "id": 2,
+    "active":"/assets/images/active-icons/team 2.svg",
+    "inactive":"/assets/images/inactive-icons/team 3.svg"
+    },
+
+    {
+    "id": 3,
+    "active":"/assets/images/active-icons/Price.svg",
+    "inactive":"/assets/images/inactive-icons/Price.svg"
+    },
+
+    {
+    "id": 4,
+    "active":"/assets/images/active-icons/Area.svg",
+    "inactive":"/assets/images/inactive-icons/Area.svg"
+    },
+
+    {
+    "id": 5,
+    "active":"/assets/images/active-icons/Parts.svg",
+    "inactive":"/assets/images/inactive-icons/Parts.svg"
+    }
+
+]

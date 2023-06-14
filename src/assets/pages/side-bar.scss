@@ -1,0 +1,103 @@
+.side-bar-container {
+  width: 65px;
+  height: 461px;
+  background-color: $hiline-color-2;
+}
+
+.selected{
+  background-color: $secondary-color;
+}
+.side-bar-content {
+  width: 65px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  //  background-color: red;
+  padding-top: 20px;
+}
+
+.inventory {
+  width: 65px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: $secondary-color;
+  // margin-bottom: 20px;
+
+  .inventory-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    // background: url("../images/inactive-icons/Inventory.svg");
+  }
+}
+
+.team {
+  width: 65px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  // background-color: magenta;
+
+  .team-icon {
+    width: 40px;
+    height: 40px;
+    background: url("../images/inactive-icons/team\ 3.svg");
+    cursor: pointer;
+  }
+}
+
+.money {
+  width: 65px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: $secondary-color;
+
+  .money-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url("../images/inactive-icons/Price.svg");
+  }
+}
+
+.area {
+  width: 65px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+//   background-color: $secondary-color;
+
+  .area-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url("../images/inactive-icons/Area.svg");
+  }
+}
+
+.parts {
+  width: 65px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: $secondary-color;
+
+  .parts-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url("../images/inactive-icons/Parts.svg");
+  }
+}
+
+.active{
+  background-color: pink;
+}

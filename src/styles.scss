@@ -1,22 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 
 // @import "assets/main"
-@import "./assets/main";
+// @import "./assets/main";
+// @import "../assets/main.scss";
+@import "../src/assets/main.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    
-    // height: 100%;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+  // height: 100%;
 }
 
 // html{
 //     // height: 100%;
 // }
 
-p,h1,h2,h3,h4,h5,span{
-margin: 0;
-padding: 0;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+  margin: 0;
+  padding: 0;
 }

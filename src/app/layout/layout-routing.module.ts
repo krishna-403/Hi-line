@@ -4,11 +4,27 @@ import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {
-    path: 'admin',
-    component: MainComponent
-  }
+    path: '',
+    component: MainComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('../inventory/inventory.module').then((mode) => mode.InventoryModule)
+      }
+
+    ]
+  },
+
+  // {
+  //   path: 'inventory',
+  //   component: InventoryModule
+  // },
+
 
 ];
+
+
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

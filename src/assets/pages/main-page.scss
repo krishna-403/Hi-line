@@ -1,0 +1,75 @@
+.main-container-box {
+  display: flex;
+}
+
+// .inventory-nav {
+//   background-color: red;
+//   width: 100%;
+// }
+app-inventory-nav {
+  width: 100%;
+  // background-color: blue;
+}
+.inventory-menu {
+  width: 100%;
+  height: 84px;
+  //   background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  // padding-left: 15px;
+  // background-color: yellow;
+}
+
+.selected_link {
+  p {
+    color: red;
+    border-bottom: 4px solid $secondary-color;
+    opacity: 1 !important;
+  }
+}
+.inventory-log {
+  width: 12%;
+  height: 45px;
+  // background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border-bottom: 4px solid $secondary-color;
+  margin-left: 1%;
+  cursor: pointer;
+  // background-color: white;
+
+  //   align-items: end;
+  p {
+    font-size: 15px;
+    color: $neutral-color-3;
+    opacity: 0.4;
+    font-weight: 700;
+    letter-spacing: -0.016em;
+    padding-top: 22px;
+    font-family: $font-family;
+    font-style: $font-style;
+    // border-bottom: 4px solid $secondary-color;
+  }
+}
+
+// .add-inventory {
+//   @extend .inventory-log;
+//   margin-left: 70px;
+//   cursor: pointer;
+//   p {
+//     color: $neutral-color-3;
+//     opacity: 0.4;
+//   }
+// }
+
+// .return-inventory {
+//   @extend .inventory-log;
+//   width: 145px;
+//   margin-left: 70px;
+//   cursor: pointer;
+//   p {
+//     color: $neutral-color-3;
+//     opacity: 0.4;
+//   }
+// }

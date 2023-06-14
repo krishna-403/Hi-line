@@ -1,0 +1,38 @@
+<div class="inventory-menu">
+
+    <div class="inventory-log" *ngFor="let item of inventoryMenu" (click)="selectedItem(item)"
+        [class.selected_link]="currentItem==item">
+        <p>{{item}}</p>
+    </div>
+
+</div>
+
+<!-- <ng-container *ngIf="currentItem=='INVENTORY LOG'"> -->
+
+    <app-inventory-log></app-inventory-log>
+
+<!-- </ng-container> -->
+
+<ng-container *ngIf="currentItem=='ADD INVENTORY'">
+
+    <app-add-inventory></app-add-inventory>
+
+</ng-container>
+
+<ng-container *ngIf="currentItem=='RETURN INVENTORY'">
+
+    <app-return-inventory></app-return-inventory>
+
+</ng-container>
+
+
+
+
+
+
+<!-- <div class="inventory-log">
+            <p>ADD INVENTORY</p>
+        </div>
+        <div class="return-inventory ">
+            <p>RETURN INVENTORY</p>
+        </div> -->

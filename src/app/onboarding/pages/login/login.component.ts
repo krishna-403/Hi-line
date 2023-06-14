@@ -20,14 +20,22 @@ export class LoginComponent {
 
   })
 
+
+loginHandle(){
+  this.loginForm.value
+}
+
   loginUser() {
     console.log(this.loginForm.value);
-    this.routes.navigate(['/admin'])
+    // console.log(this.user?.value);
+
+
+    this.routes.navigate(['/inventory'])
   }
 
-  get user() {
-    return this.loginForm.get('user');
-  }
+  // get user() {
+  //   return this.loginForm.get('user');
+  // }
 
   get email() {
     return this.loginForm.get('email');

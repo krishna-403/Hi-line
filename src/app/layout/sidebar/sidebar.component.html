@@ -1,1 +1,56 @@
-<p>sidebar works!</p>
+<div class="side-bar-container">
+
+    <div class="side-bar-content">
+
+        <div class="inventory" *ngFor="let item of sideNavMenu let i = index" (click)="changeColor(i+1)"
+            [class.selected]="currentIcon==item.id">
+            <!-- [routerLinkActive]="'active'" -->
+
+
+
+            <!-- <div class="inventory-icon">
+
+            </div> -->
+
+
+
+            <img class="inventory-icon" [src]="item.id==currentIcon?item.active:item.inactive">
+
+        </div>
+
+
+        <!-- <div class="team">
+
+            <div class="team-icon">
+
+            </div>
+
+        </div>
+
+        <div class="money">
+
+            <div class="money-icon">
+
+            </div>
+
+        </div>
+
+        <div class="area">
+
+            <div class="area-icon">
+
+            </div>
+
+        </div>
+
+        <div class="parts">
+
+            <div class="parts-icon">
+
+            </div>
+
+        </div> -->
+
+    </div>
+
+</div>
