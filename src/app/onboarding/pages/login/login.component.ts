@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, FormControlName, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginServiceService } from 'src/app/services/login-service.service';
 
 @Component({
   selector: 'app-login',
@@ -11,31 +12,33 @@ import { Router } from '@angular/router';
 export class LoginComponent {
 
 
-  constructor(private routes: Router) { }
+  constructor(private routes: Router, private logindata: LoginServiceService) { }
 
   loginForm = new FormGroup({
-    user: new FormControl('', [Validators.required]),
+    company_code: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
 
   })
 
 
-loginHandle(){
-  this.loginForm.value
-}
 
   loginUser() {
     console.log(this.loginForm.value);
+    this.logindata.login(this.loginForm.value).subscribe((res) => {
+      console.log('res', res)
+      if (res.response_code === 200) {
+        localStorage.setItem('token', res.data.access_token)
+      }
+      this.routes.navigate(['/inventory'])
+    })
     // console.log(this.user?.value);
 
-
-    this.routes.navigate(['/inventory'])
   }
 
-  // get user() {
-  //   return this.loginForm.get('user');
-  // }
+  get company_code() {
+    return this.loginForm.get('company_code');
+  }
 
   get email() {
     return this.loginForm.get('email');

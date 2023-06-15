@@ -11,18 +11,18 @@
         <form [formGroup]="loginForm" (ngSubmit)="loginUser()" class="login-form-1">
 
             <label class="form-label" for="">Company Code*</label>
-            <input class="form-input" type="text" name="" placeholder="Enter company code" formControlName="user" />
-            <span class="error-msg" *ngIf="loginForm?.value && loginForm.invalid && loginForm.touched">Invalid company code</span>
+            <input class="form-input" type="text" name="company_code" placeholder="Enter company code" formControlName="company_code"/>
+            <span class="error-msg" *ngIf="company_code && company_code.invalid && company_code.touched">Invalid company code</span>
             <!-- <span class="error-msg" *ngIf="user && user.invalid && user.touched">Invalid company code</span> -->
 
             <label class="form-label" for="">Email/Employee ID*</label>
-            <input class="form-input" type="text" name="" placeholder="Enter email/employee id"
+            <input class="form-input" type="text" name="email" placeholder="Enter email/employee id"
                 formControlName="email" />
             <span class="error-msg" *ngIf="email && email.invalid && email.touched">Invalid email/employee id</span>
 
 
             <label class="form-label" for="">Password*</label>
-            <input class="form-input" type="text" name="" placeholder="Enter password" formControlName="password" />
+            <input class="form-input" type="password" placeholder="Enter password" formControlName="password" />
             <span class="error-msg" *ngIf="password && password.invalid && password.touched">Invalid password</span>
 
             <div class="remember-me">
