@@ -7,7 +7,10 @@ import { OnboardingModule } from './onboarding/onboarding.module';
 import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
 import { InventoryModule } from './inventory/inventory.module';
-
+import { UserManagementModule } from './user-management/user-management.module';
+import { PriceModule } from './price/price.module';
+import { AreaModule } from './area/area.module';
+import { ToolsModule } from './tools/tools.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,11 @@ import { InventoryModule } from './inventory/inventory.module';
     OnboardingModule,
     LayoutModule,
     HttpClientModule,
-    InventoryModule
+    InventoryModule,
+    UserManagementModule,
+    PriceModule,
+    AreaModule,
+    ToolsModule
   ],
 
   providers: [],

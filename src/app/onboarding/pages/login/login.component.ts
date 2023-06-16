@@ -22,15 +22,20 @@ export class LoginComponent {
   })
 
 
+  // saveNewField(value: any) {
+  //   console.log('value', value)
+  // }
 
-  loginUser() {
+
+  loginUser(user_data:any) {
     console.log(this.loginForm.value);
+    console.log("data",user_data)
     this.logindata.login(this.loginForm.value).subscribe((res) => {
       console.log('res', res)
       if (res.response_code === 200) {
         localStorage.setItem('token', res.data.access_token)
+        this.routes.navigate(['/inventory'])
       }
-      this.routes.navigate(['/inventory'])
     })
     // console.log(this.user?.value);
 
@@ -47,5 +52,7 @@ export class LoginComponent {
   get password() {
     return this.loginForm.get('password');
   }
+
+
 
 }

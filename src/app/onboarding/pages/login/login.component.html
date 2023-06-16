@@ -8,11 +8,13 @@
             </h2>
         </div>
 
-        <form [formGroup]="loginForm" (ngSubmit)="loginUser()" class="login-form-1">
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)" class="login-form-1">
 
             <label class="form-label" for="">Company Code*</label>
-            <input class="form-input" type="text" name="company_code" placeholder="Enter company code" formControlName="company_code"/>
-            <span class="error-msg" *ngIf="company_code && company_code.invalid && company_code.touched">Invalid company code</span>
+            <input class="form-input" type="text" name="company_code" placeholder="Enter company code"
+                formControlName="company_code" />
+            <span class="error-msg" *ngIf="company_code && company_code.invalid && company_code.touched">Invalid company
+                code</span>
             <!-- <span class="error-msg" *ngIf="user && user.invalid && user.touched">Invalid company code</span> -->
 
             <label class="form-label" for="">Email/Employee ID*</label>
@@ -34,7 +36,7 @@
                     <p routerLink="/forgot">Forgot-password</p>
                 </div>
             </div>
-            <button class="login-button">LOGIN</button>
+            <button class="login-button" type="submit" [disabled]="!loginForm.valid">LOGIN</button>
         </form>
 
     </div>

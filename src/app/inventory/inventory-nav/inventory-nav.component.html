@@ -3,15 +3,16 @@
     <div class="inventory-log" *ngFor="let item of inventoryMenu" (click)="selectedItem(item)"
         [class.selected_link]="currentItem==item">
         <p>{{item}}</p>
+
     </div>
 
 </div>
 
-<!-- <ng-container *ngIf="currentItem=='INVENTORY LOG'"> -->
+<ng-container *ngIf="currentItem=='INVENTORY LOG'">
 
     <app-inventory-log></app-inventory-log>
 
-<!-- </ng-container> -->
+</ng-container>
 
 <ng-container *ngIf="currentItem=='ADD INVENTORY'">
 

@@ -107,17 +107,47 @@ table {
   width: 95%;
   margin-left: 2.5%;
   margin-top: 2%;
+
+  td {
+    border: none;
+  }
+
+  .checkbox {
+    width: 15px;
+    height: 15px;
+    margin-right: 14px;
+  }
+
+  // input {
+  //     -webkit-appearance: none;
+  //     -moz-appearance: none;
+  //     appearance: none;
+  //     border: 2px solid $secondary-color;
+  //     width: 18px;
+  //     height: 18px;
+  //     border-radius: 4px;
+  //     margin-right: 10px;
+  //     outline: none;
+  // }
+
+  // input:checked{
+  //   // background-color: red;
+  //   color: white;
+  //   background-color: blue;
+  // }
 }
+
+
 
 td {
   border: 1px solid #c0c0c0;
   text-align: left;
   padding: 8px;
   font-size: 14px;
-  input {
-    margin-right: 15px;
-    border: 2px solid $secondary-color;
-  }
+  // input {
+  //   margin-right: 15px;
+  //   border: 2px solid $secondary-color;
+  // }
   border-right: none;
   border-left: none;
 }
@@ -128,12 +158,27 @@ th {
   height: 30px;
   font-size: 14px;
 
-  input {
-    margin-right: 15px;
-    border: 2px solid $secondary-color;
-  }
+  // input {
+  //   margin-right: 15px;
+  //   border: 2px solid $secondary-color;
+  // }
 }
 
 tr:nth-child(even) {
   background-color: $tertiary-color-1;
+}
+
+.up-down-arrow{
+  width: 6px;
+  height: 10px;
+  background-image: url("../icons/Sort\ Up\ &\ Down.svg");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.th-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // border-left: none;
 }

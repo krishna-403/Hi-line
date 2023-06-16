@@ -1,30 +1,35 @@
 [
     {
     "id": 1,
+    "route":"/inventory",
     "active":"/assets/images/active-icons/Inventory.svg",
     "inactive":"/assets/images/inactive-icons/Inventory.svg"
     },
 
     {
     "id": 2,
+    "route":"/management",
     "active":"/assets/images/active-icons/team 2.svg",
     "inactive":"/assets/images/inactive-icons/team 3.svg"
     },
 
     {
     "id": 3,
+    "route":"/price",
     "active":"/assets/images/active-icons/Price.svg",
     "inactive":"/assets/images/inactive-icons/Price.svg"
     },
 
     {
     "id": 4,
+    "route":"/area",
     "active":"/assets/images/active-icons/Area.svg",
     "inactive":"/assets/images/inactive-icons/Area.svg"
     },
 
     {
     "id": 5,
+    "route":"/tools",
     "active":"/assets/images/active-icons/Parts.svg",
     "inactive":"/assets/images/inactive-icons/Parts.svg"
     }

@@ -3,7 +3,9 @@
     <div class="side-bar-content">
 
         <div class="inventory" *ngFor="let item of sideNavMenu let i = index" (click)="changeColor(i+1)"
-            [class.selected]="currentIcon==item.id">
+            [class.selected]="currentIcon==item.id"
+            [routerLink]="item.route"
+            >
             <!-- [routerLinkActive]="'active'" -->
 
 
