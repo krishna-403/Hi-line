@@ -1,0 +1,71 @@
+.price-m {
+  display: flex;
+  justify-content: space-between;
+  //   background-color: beige;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 3%;
+  h3 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.0145455em;
+  }
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  //   background-color: red;
+  width: 16%;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #4c4d4f;
+  }
+}
+
+.price-f {
+  display: flex;
+  gap: 15px;
+  margin-top: 1.5%;
+  margin-left: 2.5%;
+  .price-add {
+    width: 78px;
+    height: 33px;
+    background-color: $secondary-color;
+    border-radius: 8px;
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .price-download {
+    @extend .price-add;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 33px;
+  }
+
+  .price-setting {
+    @extend .price-add;
+    width: 160px;
+    height: 33px;
+  }
+
+  .price-csv {
+    @extend .price-add;
+    width: 120px;
+    height: 33px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}
