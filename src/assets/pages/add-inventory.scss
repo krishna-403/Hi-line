@@ -7,7 +7,7 @@
 }
 
 .add-inventory-form {
-    padding: 30px;
+  padding: 30px;
   .add-inventory-input {
     width: 335px;
     height: 80px;
@@ -18,6 +18,7 @@
       width: 320px;
       height: 28px;
       border: 1px solid $neutral-color-3;
+      text-indent: 5px;
     }
 
     label {
@@ -31,7 +32,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-        // padding: 15px;
+    // padding: 15px;
   }
 }
 
@@ -48,5 +49,6 @@
     height: 37px;
     color: white;
     border: none;
+    cursor: pointer;
   }
 }
