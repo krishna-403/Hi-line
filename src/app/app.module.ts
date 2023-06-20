@@ -28,7 +28,7 @@ import { ToolsModule } from './tools/tools.module';
     UserManagementModule,
     PriceModule,
     AreaModule,
-    ToolsModule
+    ToolsModule,
   ],
 
   providers: [],

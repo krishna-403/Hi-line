@@ -42,13 +42,7 @@
 
   //   background-color: red;
   button {
-    background-color: $secondary-color;
     opacity: 0.5;
-    border-radius: 8px;
-    width: 98px;
-    height: 37px;
-    color: white;
-    border: none;
-    cursor: pointer;
+    @include button;
   }
 }

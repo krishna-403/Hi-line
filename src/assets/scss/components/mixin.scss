@@ -1,0 +1,20 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 8px;
+  padding: 9px 30px;
+  list-style: none;
+  font-weight: 700;
+  font-size: 13px;
+  background-color: $secondary-color;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}

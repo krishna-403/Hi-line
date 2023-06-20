@@ -6,6 +6,7 @@ import { ReturnInventoryComponent } from './return-inventory/return-inventory.co
 import { AddInventoryComponent } from './add-inventory/add-inventory.component';
 import { InventoryLogComponent } from './inventory-log/inventory-log.component';
 import { InventoryNavComponent } from './inventory-nav/inventory-nav.component';
+import { EditJobComponent } from './edit-job/edit-job.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { InventoryNavComponent } from './inventory-nav/inventory-nav.component';
     ReturnInventoryComponent,
     AddInventoryComponent,
     InventoryLogComponent,
-    InventoryNavComponent
+    InventoryNavComponent,
+    EditJobComponent
   ],
   imports: [
     CommonModule,

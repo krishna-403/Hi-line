@@ -28,44 +28,30 @@
 
 .price-f {
   display: flex;
-  gap: 15px;
+  gap: 25px;
   margin-top: 1.5%;
   margin-left: 2.5%;
+
   .price-add {
-    width: 78px;
-    height: 33px;
-    background-color: $secondary-color;
-    border-radius: 8px;
-    border: none;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 14px;
-    cursor: pointer;
+    @include button;
   }
 
   .price-download {
-    @extend .price-add;
+    @include button;
     display: flex;
     gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 33px;
+    .dropdown-arrow-icon {
+      background-size: 100% 100%;
+    }
   }
 
   .price-setting {
-    @extend .price-add;
-    width: 160px;
-    height: 33px;
+    @include button;
   }
 
   .price-csv {
-    @extend .price-add;
-    width: 120px;
-    height: 33px;
+    @include button;
     display: flex;
     gap: 10px;
-    justify-content: center;
-    align-items: center;
   }
 }
