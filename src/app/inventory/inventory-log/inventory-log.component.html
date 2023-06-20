@@ -10,6 +10,16 @@
 
 
 
+    <div class="container-modal" *ngIf="general.showDialog">
+        <div class="content">Are you sure want to delete this Job# - 123456?</div>
+
+        <div class="action">
+            <button class="cancel-btn">Cancel</button>
+            <button (click)="general.showDialog=false">Delete</button>
+
+        </div>
+    </div>
+
     <table>
         <tr>
             <th style="border-left: none;">
@@ -41,11 +51,8 @@
             <td>
                 <div class="actions">
                     <div class="print"></div>
-                    <div class="edit"
-                    
-                    routerLink="/edit-job"
-                    ></div>
-                    <div class="delete"></div>
+                    <div class="edit" routerLink="/edit-job"></div>
+                    <div class="delete" (click)="general.showDialog=true"></div>
                 </div>
             </td>
         </tr>
@@ -76,9 +83,7 @@
             <td>
                 <div class="actions">
                     <div class="print"></div>
-                    <div class="edit"
-                    routerLink="/edit-job"
-                    ></div>
+                    <div class="edit" routerLink="/edit-job"></div>
                     <div class="delete"></div>
                 </div>
             </td>

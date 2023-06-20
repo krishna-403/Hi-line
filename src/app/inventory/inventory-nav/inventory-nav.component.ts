@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+import { LoginServiceService } from 'src/app/services/login-service.service';
 @Component({
   selector: 'app-inventory-nav',
   templateUrl: './inventory-nav.component.html',
   styleUrls: ['./inventory-nav.component.scss']
 })
 export class InventoryNavComponent implements OnInit {
+  constructor(private general: LoginServiceService) { }
+
+  
   currentItem: any
   inventoryMenu = ['INVENTORY LOG', 'ADD INVENTORY', 'RETURN INVENTORY']
 

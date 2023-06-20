@@ -1,20 +1,19 @@
 .edit-j {
   width: 95%;
   height: 12%;
-//   background-color: beige;
+  //   background-color: beige;
   display: flex;
   align-items: center;
   gap: 15px;
-  margin: 2.5%;
+  margin: 2.5% 0 0 2.5%;
 
   .right-left-arrow {
     width: 9px;
     height: 15px;
     cursor: pointer;
     background-image: url("../icons/Right-left\ Arrow.svg");
-background-size: 100% 100%;  
-}
-
+    background-size: 100% 100%;
+  }
 
   h5 {
     font-weight: 700;
@@ -27,15 +26,16 @@ background-size: 100% 100%;
 
 .edit-job-d {
   @extend .edit-j;
+  margin-top: 1%;
   background-color: $tertiary-color-1;
   height: 30%;
   box-shadow: 0px 4px 4px rgba(192, 192, 192, 0.5);
 }
 
 .edit-job-form {
-//   background-color: red;
+    // background-color: red;
   width: 100%;
-padding: 2%;
+  padding: 2%;
   .edit-j-desc {
     display: flex;
     flex-direction: column;
@@ -45,11 +45,11 @@ padding: 2%;
       height: 28px;
       border: 1px solid $neutral-color-3;
       text-indent: 5px;
-    //   margin-left: 2%;
+      //   margin-left: 2%;
     }
 
     label {
-    //   margin-left: 2%;
+      //   margin-left: 2%;
       font-size: 16px;
       font-weight: 400px;
       color: $neutral-color-2;
@@ -62,6 +62,5 @@ padding: 2%;
     opacity: 0.5;
     @include button;
     margin-top: 2%;
-    
   }
 }

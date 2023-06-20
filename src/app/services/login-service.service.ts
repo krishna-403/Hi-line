@@ -8,7 +8,9 @@ import { environment } from 'src/environments/environment';
 })
 
 export class LoginServiceService {
+  showDialog = false;
   api: any
+
   constructor(private http: HttpClient) {
     this.api = environment.loginApi
   }
