@@ -82,3 +82,75 @@
     background-size: cover;
   }
 }
+
+.profile-setting-container {
+  width: 191px;
+  height: 96px;
+  background-color: beige;
+  border: 1px solid $secondary-color;
+  position: relative;
+  top: 55px;
+  right: 18px;
+  position: fixed;
+
+  .profile-setting {
+    width: 191px;
+    height: 50%;
+    background-color: $tertiary-color-2;
+    display: flex;
+    // padding: 0px 16px;
+    align-items: center;
+    // justify-content: center;
+    gap: 25px;
+    cursor: pointer;
+
+    .profile-setting-icon {
+      width: 18px;
+      height: 20px;
+      margin-left: 20px;
+      background-image: url("../icons/PlayerSettings\(EF58\).svg");
+      // background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: -0.016em;
+      color: $neutral-color-3;
+    }
+  }
+
+  .logout {
+    width: 191px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    background-color: $tertiary-color-2;
+    gap: 25px;
+    cursor: pointer;
+
+    .logout-icon {
+      width: 18px;
+      height: 20px;
+      background-image: url("../icons/ReplyMirrored\(EE35\).svg");
+      background-repeat: no-repeat;
+      margin-left: 20px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: -0.016em;
+      color: $neutral-color-3;
+    }
+  }
+}
+
+.profile-setting:hover {
+  background-color: $tertiary-color-1;
+}
+
+.logout:hover {
+  background-color: $tertiary-color-1;
+}

@@ -9,14 +9,15 @@
     </div>
 
 
+    <div class="model-box" *ngIf="general.showDialog" (click)="general.showDialog=false">
+        <div class="container-modal" *ngIf="general.showDialog">
+            <div class="content">Are you sure want to delete this Job# - 123456?</div>
 
-    <div class="container-modal" *ngIf="general.showDialog">
-        <div class="content">Are you sure want to delete this Job# - 123456?</div>
+            <div class="action">
+                <button class="cancel-btn">Cancel</button>
+                <button (click)="general.showDialog=false">Delete</button>
 
-        <div class="action">
-            <button class="cancel-btn">Cancel</button>
-            <button (click)="general.showDialog=false">Delete</button>
-
+            </div>
         </div>
     </div>
 
