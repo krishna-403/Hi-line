@@ -11,6 +11,7 @@ import { UserManagementModule } from './user-management/user-management.module';
 import { PriceModule } from './price/price.module';
 import { AreaModule } from './area/area.module';
 import { ToolsModule } from './tools/tools.module';
+import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +30,11 @@ import { ToolsModule } from './tools/tools.module';
     PriceModule,
     AreaModule,
     ToolsModule,
+    SharedModule
   ],
 
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

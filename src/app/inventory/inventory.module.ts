@@ -7,6 +7,7 @@ import { AddInventoryComponent } from './add-inventory/add-inventory.component';
 import { InventoryLogComponent } from './inventory-log/inventory-log.component';
 import { InventoryNavComponent } from './inventory-nav/inventory-nav.component';
 import { EditJobComponent } from './edit-job/edit-job.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { EditJobComponent } from './edit-job/edit-job.component';
   ],
   imports: [
     CommonModule,
-    InventoryRoutingModule
+    InventoryRoutingModule,
+    SharedModule
   ]
 })
 export class InventoryModule { }

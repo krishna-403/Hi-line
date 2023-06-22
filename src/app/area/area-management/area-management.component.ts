@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginServiceService } from 'src/app/services/login-service.service';
 
 @Component({
   selector: 'app-area-management',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./area-management.component.scss']
 })
 export class AreaManagementComponent {
+
+  constructor(public general: LoginServiceService) { }
+
 
 }

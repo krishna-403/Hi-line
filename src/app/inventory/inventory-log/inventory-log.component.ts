@@ -6,5 +6,5 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
   styleUrls: ['./inventory-log.component.scss']
 })
 export class InventoryLogComponent {
-  constructor(public general:LoginServiceService){}
+   constructor(public general:LoginServiceService){}
 }

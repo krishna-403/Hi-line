@@ -10,6 +10,8 @@
     </div>
 </div>
 
+<app-modal-delete></app-modal-delete>
+
 <table>
     <tr>
         <th style="border-left: none;">
@@ -46,7 +48,7 @@
             <div class="actions">
 
                 <div class="edit"></div>
-                <div class="delete"></div>
+                <div class="delete" (click)="general.showDialog=true"></div>
             </div>
         </td>
     </tr>

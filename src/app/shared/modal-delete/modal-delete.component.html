@@ -1,0 +1,11 @@
+<div class="model-box" *ngIf="general.showDialog">
+    <div class="container-modal">
+        <div class="content">Are you sure want to delete this Job# - 123456?</div>
+
+        <div class="action">
+            <button class="cancel-btn" (click)="general.showDialog=false">Cancel</button>
+            <button (click)="general.showDialog=false">Delete</button>
+
+        </div>
+    </div>
+</div>

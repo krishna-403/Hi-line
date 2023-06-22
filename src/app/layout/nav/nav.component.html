@@ -45,12 +45,12 @@
 
 </div>
 
-<div class="profile-setting-container" *ngIf="profile"> 
+<div class="profile-setting-container" *ngIf="profile">
     <div class="profile-setting">
         <div class="profile-setting-icon"></div>
         <p>Profile Settings</p>
     </div>
-    <div class="logout">
+    <div class="logout" (click)="logout()">
         <div class="logout-icon"></div>
         <p>Logout</p>
     </div>

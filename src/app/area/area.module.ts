@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AreaRoutingModule } from './area-routing.module';
 import { AreaManagementComponent } from './area-management/area-management.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { AreaManagementComponent } from './area-management/area-management.compo
   ],
   imports: [
     CommonModule,
-    AreaRoutingModule
+    AreaRoutingModule,
+    SharedModule
   ]
 })
 export class AreaModule { }
