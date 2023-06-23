@@ -47,7 +47,7 @@
         <td>
             <div class="actions">
 
-                <div class="edit"></div>
+                <div class="edit" (click)="general.add_user=true"></div>
                 <div class="delete" (click)="general.showDialog=true"></div>
             </div>
         </td>
@@ -64,7 +64,7 @@
         <td>
             <div class="actions">
 
-                <div class="edit"></div>
+                <div class="edit" (click)="general.add_user=true"></div>
                 <div class="delete"></div>
             </div>
         </td>
@@ -147,7 +147,7 @@
         <td>
             <div class="actions">
 
-                <div class="edit"></div>
+                <div class="edit" (click)="general.add_user=true"></div>
                 <div class="delete"></div>
             </div>
         </td>
@@ -155,12 +155,112 @@
 
 
 </table>
+<!-- add modal for price management -->
+<div class="model-add-user" *ngIf="general.add_user">
+    <div class="add-user">
+
+        <div class="add-user-head">
+
+            <h3>Add</h3>
+
+            <div class="cancel-icon" (click)="general.add_user=false"></div>
+
+        </div>
+
+        <form class="add-user-form">
+
+            <div class="add-user-data">
+
+                <div class="price-m-input">
+                    <label for="">Part Number*</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+                <div class="price-m-input">
+                    <label for="">Part Description*</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+                <div class="price-m-input">
+                    <label for="">Cost EA</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+                <div class="price-m-input">
+                    <label for="">Price EA</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+
+            </div>
+
+            <div class="price-submit">
+                <button>ADD</button>
+            </div>
+        </form>
+
+
+
+    </div>
+</div>
+
 
 <div class="price-f">
 
-    <button class="price-add">ADD</button>
+    <button class="price-add" (click)="general.add_user=true">ADD</button>
     <button class="price-download">DOWNLOAD DATA <div class="dropdown-arrow-icon"></div></button>
     <button class="price-setting">PRICE SETTINGS</button>
     <button class="price-csv">CSV/EXCEL<div class="dropdown-arrow-icon"></div></button>
 
+</div>
+
+
+<!-- edit modal for price management -->
+
+<div class="model-add-user" *ngIf="general.add_user">
+    <div class="add-user">
+
+        <div class="add-user-head">
+
+            <h3>Edit Part# - 123456</h3>
+
+            <div class="cancel-icon" (click)="general.add_user=false"></div>
+
+        </div>
+
+        <form class="add-user-form">
+
+            <div class="add-user-data">
+
+                <div class="price-m-input">
+                    <label for="">Part Number*</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+                <div class="price-m-input">
+                    <label for="">Part Description*</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+                <div class="price-m-input">
+                    <label for="">Cost EA</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+                <div class="price-m-input">
+                    <label for="">Price EA</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+
+            </div>
+
+            <div class="price-submit">
+                <button>UPDATE</button>
+            </div>
+        </form>
+
+
+
+    </div>
 </div>

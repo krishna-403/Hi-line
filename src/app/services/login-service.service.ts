@@ -8,7 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 
 export class LoginServiceService {
-  showDialog = false;
+  showDialog: boolean = false;
+  add_user: boolean = false;
   api: any
 
   constructor(private http: HttpClient) {
