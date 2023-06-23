@@ -46,7 +46,7 @@
 </div>
 
 <div class="profile-setting-container" *ngIf="profile">
-    <div class="profile-setting">
+    <div class="profile-setting" routerLink="/profile" (click)="toggle()">
         <div class="profile-setting-icon"></div>
         <p>Profile Settings</p>
     </div>

@@ -44,5 +44,6 @@
   button {
     opacity: 0.5;
     @include button;
+    margin-top: 1% !important;
   }
 }

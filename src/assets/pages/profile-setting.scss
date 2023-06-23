@@ -1,0 +1,140 @@
+.profile-heading {
+  display: flex;
+  justify-content: space-between;
+  //   background-color: beige;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 3%;
+  h3 {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.0145455em;
+  }
+}
+
+.profile-detail-box {
+  width: 700px;
+  height: 200px;
+  display: flex;
+  // background-color: beige;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 180px;
+
+  .profile-icon-section {
+    .profile-icon-box {
+      width: 150px;
+      height: 150px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+
+      .profile-icon {
+        height: 90px;
+        width: 90px;
+        margin-top: 15px;
+        background-image: url("/assets/icons/image\ 1.svg");
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    button {
+      @include button;
+      border-radius: 16px;
+      padding: 7px 20px;
+      font-weight: 400;
+      margin-left: 23%;
+      margin-top: -11%;
+      cursor: pointer;
+    }
+  }
+}
+
+.profile-detail {
+  width: 300px;
+  height: 200px;
+  // background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .profile-label-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $neutral-color-3;
+    opacity: 0.5;
+    font-weight: 400;
+  }
+
+  h6 {
+    font-size: 16px;
+    letter-spacing: -0.288px;
+    font-weight: 400;
+  }
+}
+
+.change-password-box {
+  width: 96%;
+  height: 40%;
+  background-color: $tertiary-color-1;
+  box-shadow: 0px 4px 4px rgba(192, 192, 192, 0.5);
+  margin-left: 2%;
+
+  h5 {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.32px;
+    margin-bottom: 1.5%;
+  }
+}
+
+.change-password-form {
+  padding: 15px;
+
+  .change-password-input {
+    width: 335px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    input {
+      width: 300px;
+      height: 28px;
+      border: 1px solid $neutral-color-3;
+      text-indent: 5px;
+    }
+
+    label {
+      font-weight: 400px;
+      font-size: 14px;
+      color: #001b2d;
+    }
+  }
+
+  .change-password-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.change-password-submit {
+  display: flex;
+  justify-content: end;
+  padding: 0px 28px;
+  //   background-color: red;
+  button {
+    @include button;
+  }
+}

@@ -1,9 +1,15 @@
 .user-m {
+  display: flex;
+  justify-content: space-between;
+  //   background-color: beige;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 3%;
   h3 {
-    font-weight: 700;
     font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.0145455em;
   }
-  margin: 20px;
 }
 
 .toggle {
@@ -26,28 +32,26 @@
     border-radius: 50%;
     background: #fff;
     display: flex;
-    
     margin: 4px;
-    
     transition: 0.4s;
   }
 
   input[type="checkbox"]:checked::before {
     transform: translateX(110%);
     background: #fff;
-    
-    
   }
 
   input[type="checkbox"]:checked {
-    background: #27AE60;
+    background: #27ae60;
   }
 }
 
-.hide{
-    width: 23px;
-    height: 16px;
-    background-image: url(../icons/hide.svg);
-    margin-top: -7px;
-    cursor: pointer;
+.hide {
+  width: 23px;
+  height: 16px;
+  background-image: url(../icons/hide.svg);
+  margin-top: -7px;
+  cursor: pointer;
 }
+
+

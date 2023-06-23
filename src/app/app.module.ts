@@ -12,6 +12,7 @@ import { PriceModule } from './price/price.module';
 import { AreaModule } from './area/area.module';
 import { ToolsModule } from './tools/tools.module';
 import { SharedModule } from './shared/shared.module';
+import { ProfileSettingModule } from './profile-setting/profile-setting.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { SharedModule } from './shared/shared.module';
     PriceModule,
     AreaModule,
     ToolsModule,
-    SharedModule
+    SharedModule,
+    ProfileSettingModule
   ],
 
   providers: [],
