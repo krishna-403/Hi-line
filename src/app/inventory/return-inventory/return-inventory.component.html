@@ -1,5 +1,5 @@
 <div class="add-inventory-container">
-    <form class="add-inventory-form">
+    <form class="add-inventory-form" [formGroup]="returnInventory">
 
         <div class="add-inventory-data">
 
@@ -7,33 +7,43 @@
 
             <div class="add-inventory-input">
                 <label for="">Job Numbers*</label>
-                <input type="number" placeholder="Enter number">
+                <input type="number" placeholder="Enter number" formControlName="job_number" autocomplete="off">
+                <span class="barcode"></span>
+                <span class="error-msg" *ngIf="job_number && job_number.invalid && job_number.touched">Invalid Job
+                    Number
+                </span>
             </div>
 
             <div class="add-inventory-input">
                 <label for="">Job Description*</label>
-                <input type="text" placeholder="Enter text">
+
+                <input type="text" placeholder="Enter text" formControlName="job_description">
+                <span class="error-msg"
+                    *ngIf="job_description && job_description.invalid && job_description.touched">Invalid Job
+                    Description
+                </span>
             </div>
 
             <div class="add-inventory-input">
                 <label for="">Area</label>
-                <input type="text" placeholder="Enter text">
+                <input type="text" placeholder="Enter text" formControlName="area" formControlName="part_number">
 
             </div>
 
             <div class="add-inventory-input">
                 <label for="">Part Number</label>
                 <input type="number" placeholder="Enter number">
+                <span class="barcode"></span>
             </div>
 
             <div class="add-inventory-input">
                 <label for="">Part Description</label>
-                <input type="text" placeholder="Enter text">
+                <input type="text" placeholder="Enter text" formControlName="part_description">
             </div>
 
             <div class="add-inventory-input">
                 <label for="">Quantity</label>
-                <input type="number" placeholder="Enter number">
+                <input type="number" placeholder="Enter number" formControlName="quantity">
             </div>
 
         </div>
@@ -41,7 +51,7 @@
         <div class="add-inventory-submit">
 
 
-            <button type="submit">Return</button>
+            <button type="submit" [disabled]="!returnInventory.value" [class.notDisabled]="returnInventory">Return</button>
         </div>
 
     </form>

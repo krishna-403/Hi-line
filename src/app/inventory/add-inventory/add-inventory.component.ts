@@ -12,8 +12,12 @@ export class AddInventoryComponent {
 
 
   addInventory = new FormGroup({
-    job_number: new FormControl('', [Validators.required]),
-    job_description: new FormControl('', [Validators.required]),
+    job_number: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]),
+    job_description: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]),
+    area: new FormControl('', [Validators.required]),
+    part_number: new FormControl('', [Validators.required]),
+    part_description: new FormControl('', [Validators.required]),
+    quantity: new FormControl('', [Validators.required]),
   })
 
 
@@ -25,5 +29,5 @@ export class AddInventoryComponent {
     return this.addInventory.get('job_description');
   }
 
-  
+
 }

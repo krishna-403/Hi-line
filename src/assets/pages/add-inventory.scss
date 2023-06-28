@@ -11,7 +11,6 @@
   .add-inventory-input {
     width: 335px;
     height: 80px;
-
     // background-color: red;
 
     input {
@@ -19,6 +18,19 @@
       height: 28px;
       border: 1px solid $neutral-color-3;
       text-indent: 5px;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      appearance: none;
+      -moz-appearance: textfield;
     }
 
     label {
@@ -42,8 +54,34 @@
 
   //   background-color: red;
   button {
-    opacity: 0.5;
-    @include button;
-    margin-top: 1% !important;
-  }
+    .btn {
+      opacity: 0.5;
+      @include button;
+      margin-top: 1% !important;
+    }
+
+}
+
+button:disabled {
+  opacity: 0.5 !important;
+  background-color: $secondary-color !important ;
+}
+
+.notDisabled {
+  opacity: 1 !important;
+  background-color: $secondary-color !important;
+}
+
+.barcode {
+  position: absolute;
+  margin: 8px 0 0 -30px;
+  // top: 10px;
+  // left: 10px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../icons/Barcon\ -\ Icon.svg");
+  cursor: pointer;
+  background-size: 100% 100%;
+  // background-position: center;
+}
 }
