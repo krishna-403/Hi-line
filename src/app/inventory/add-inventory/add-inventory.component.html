@@ -1,17 +1,25 @@
 <div class="add-inventory-container">
-    <form class="add-inventory-form">
+    <form [formGroup]="addInventory" class="add-inventory-form">
 
         <div class="add-inventory-data">
 
             <div class="add-inventory-input">
                 <label for="">Job Numbers*</label>
-                <input type="number" placeholder="Enter number">
+                <input type="number" name="job_number" placeholder="Enter number" formControlName="job_number" />
+                <span class="error-msg" *ngIf="job_number && job_number.invalid && job_number.touched">Invalid Job
+                    Number
+                </span>
             </div>
 
             <div class="add-inventory-input">
                 <label for="">Job Description*</label>
-                <input type="text" placeholder="Enter text">
+
+                <input type="text" placeholder="Enter text" formControlName="job_description">
+                <span class="error-msg" *ngIf="job_description && job_description.invalid && job_description.touched">Invalid
+                    Job Description
+                </span>
             </div>
+
 
             <div class="add-inventory-input">
                 <label for="">Area</label>

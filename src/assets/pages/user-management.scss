@@ -96,7 +96,7 @@
 
     .add-user-form {
       width: 95%;
-      height: 80%;
+      height: 80% !important;
       // background-color: $tertiary-color-1;
       margin-left: 2.5%;
       // padding: 2.5%;
@@ -117,7 +117,7 @@
           margin: 15px 0 0 10px;
 
           input {
-            width: 370px;
+            width: 370px !important;
             height: 35px;
             border: 1px solid $neutral-color-3;
             text-indent: 5px;

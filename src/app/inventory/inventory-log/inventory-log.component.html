@@ -8,12 +8,17 @@
         </div>
     </div>
 
-<app-modal-delete></app-modal-delete>
-  
+    <app-modal-delete></app-modal-delete>
+
     <table>
         <tr>
             <th style="border-left: none;">
-                <div class="th-top"> <input class="checkbox" type="checkbox">Jobs# <div class="up-down-arrow"></div>
+                <div class="th-top"> <label class="check-box_container">
+                        <p>Jobs#</p>
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="up-down-arrow"></div>
                 </div>
             </th>
             <th>Job Description</th>
@@ -31,12 +36,20 @@
             </th>
             <th style="border-right: none;">Actions</th>
         </tr>
-        <tr>
-            <td><input class="checkbox" type="checkbox">123456</td>
-            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.</td>
-            <td>10/22/2019</td>
-            <td style="text-align: right;">24</td>
-            <td class="table-open">Open <div class="table-dropdown-arrow-icon"></div>
+        <tr *ngFor="let item of data">
+            <td style="text-align: center;">
+
+                <label class="check-box_container">
+                    <p>{{item.job_num}}</p>
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+
+            </td>
+            <td>{{item.job_desc}}</td>
+            <td>{{item.date}}</td>
+            <td style="text-align: right;">{{item.quantity}}</td>
+            <td class="table-open">{{item.invoiced}} <div class="table-dropdown-arrow-icon"></div>
             </td>
             <td>
                 <div class="actions">
@@ -47,7 +60,7 @@
             </td>
         </tr>
 
-        <tr>
+        <!-- <tr>
             <td><input class="checkbox" type="checkbox">123456</td>
             <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.</td>
             <td>10/22/2019</td>
@@ -80,7 +93,7 @@
         </tr>
 
 
-        <tr>
+         <tr> 
             <td><input class="checkbox" type="checkbox">123456</td>
             <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.</td>
             <td>10/22/2019</td>
@@ -128,15 +141,7 @@
                 </div>
             </td>
         </tr>
-
-
-
-
-
-
-
-
-
+ -->
 
     </table>
 </div>

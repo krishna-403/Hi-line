@@ -17,6 +17,6 @@ export class NavComponent {
   logout() {
     localStorage.removeItem('token');
     this.routes.navigate(["/"])
+    localStorage.removeItem('clicked_menu');
   }
-
 }

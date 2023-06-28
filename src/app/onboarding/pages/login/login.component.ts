@@ -18,23 +18,24 @@ export class LoginComponent {
     company_code: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
-
   })
 
+  currentIcon: any = 1;
 
   // saveNewField(value: any) {
   //   console.log('value', value)
   // }
 
 
-  loginUser(user_data:any) {
+  loginUser(user_data: any) {
     console.log(this.loginForm.value);
-    console.log("data",user_data)
+    console.log("data", user_data)
     this.logindata.login(this.loginForm.value).subscribe((res) => {
       console.log('res', res)
       if (res.response_code === 200) {
         localStorage.setItem('token', res.data.access_token)
         this.routes.navigate(['/inventory'])
+        localStorage.setItem('clicked_menu', this.currentIcon)
       }
     })
     // console.log(this.user?.value);
@@ -52,7 +53,5 @@ export class LoginComponent {
   get password() {
     return this.loginForm.get('password');
   }
-
-
 
 }
