@@ -15,7 +15,7 @@
             <th style="border-left: none;">
                 <div class="th-top"> <label class="check-box_container">
                         <p>Jobs#</p>
-                        <input type="checkbox">
+                        <input type="checkbox" (change)="change_input_check($event)">
                         <span class="checkmark"></span>
                     </label>
                     <div class="up-down-arrow"></div>
@@ -41,7 +41,7 @@
 
                 <label class="check-box_container">
                     <p>{{item.job_num}}</p>
-                    <input type="checkbox">
+                    <input type="checkbox" [checked]="check">
                     <span class="checkmark"></span>
                 </label>
 

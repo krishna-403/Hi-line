@@ -10,34 +10,31 @@ export class InventoryLogComponent {
 
 
 
+  public check = false;
 
-  // table_data: any = [];
-  // DataAssign() {
-  //   // this.table_data =//your data;
-  //   // now check the array size
-  //   // if (this.table_data.length <= 5) {
-  //     for (let i = 0; i <=5; i++) {
-  //       let obj = {
-  //         id: 123456,
-  //         job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
-  //         date: '10/22/2019',
-  //         quantity: 24,
-  //         invoiced: 'open'
-  //       };
-  //       this.table_data.push(obj);
-  //     }
-  //   // }
-  // }
+
+  //function to change all input checkbox in one click
+
+  change_input_check(event: any) {
+    if (event.target.checked == true) {
+      this.check = true;
+    }
+    else {
+      this.check = false;
+    }
+  }
+
 
 
   public data = [
     {
-      id:1,
+      id: 1,
       job_num: 123456,
       job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
       date: '10 / 22 / 2019',
       quantity: 24,
-      invoiced: 'open'
+      invoiced: 'open',
+
     },
     {
       id: 2,
@@ -45,7 +42,7 @@ export class InventoryLogComponent {
       job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
       date: '10 / 22 / 2019',
       quantity: 24,
-      invoiced: 'open'
+      invoiced: 'open',
     },
     {
       id: 3,
@@ -53,7 +50,7 @@ export class InventoryLogComponent {
       job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
       date: '10 / 22 / 2019',
       quantity: 24,
-      invoiced: 'open'
+      invoiced: 'open',
     },
     {
       id: 4,
@@ -61,7 +58,8 @@ export class InventoryLogComponent {
       job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
       date: '10 / 22 / 2019',
       quantity: 24,
-      invoiced: 'open'
+      invoiced: 'open',
+
     },
     {
       id: 5,
@@ -69,7 +67,9 @@ export class InventoryLogComponent {
       job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
       date: '10 / 22 / 2019',
       quantity: 24,
-      invoiced: 'open'
+      invoiced: 'open',
+      checks: false
+
     },
     {
       id: 6,
@@ -77,7 +77,8 @@ export class InventoryLogComponent {
       job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
       date: '10 / 22 / 2019',
       quantity: 24,
-      invoiced: 'open'
+      invoiced: 'open',
+
     }
   ]
 }
