@@ -26,13 +26,13 @@
 
             <div class="add-inventory-input">
                 <label for="">Area</label>
-                <input type="text" placeholder="Enter text" formControlName="area" formControlName="part_number">
+                <input type="text" placeholder="Enter text" formControlName="area">
 
             </div>
 
             <div class="add-inventory-input">
                 <label for="">Part Number</label>
-                <input type="number" placeholder="Enter number">
+                <input type="number" placeholder="Enter number" formControlName="part_number">
                 <span class="barcode"></span>
             </div>
 
@@ -49,11 +49,9 @@
         </div>
 
         <div class="add-inventory-submit">
-
-
-            <button type="submit" [disabled]="!returnInventory.value" [class.notDisabled]="returnInventory">Return</button>
+            <button class="btn" type="submit" [disabled]="!returnInventory.valid"
+                [class.notDisabled]="returnInventory">Return</button>
         </div>
-
     </form>
 
 

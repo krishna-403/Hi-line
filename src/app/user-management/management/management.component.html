@@ -7,7 +7,7 @@
 
 <!-- user management add modal -->
 <div class="model-add-user" *ngIf="general.add_user">
-    <div class="add-area">
+    <div class="add-user">
 
         <div class="add-user-head">
 
@@ -60,7 +60,12 @@
 <table>
     <tr>
         <th style="border-left: none;">
-            <div class="th-top"> <input class="checkbox" type="checkbox">Employee Id <div class="up-down-arrow"></div>
+            <div class="th-top"> <label class="check-box_container">
+                    <p>Employee ID</p>
+                    <input type="checkbox" (change)="change_input_check($event)">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="up-down-arrow"></div>
             </div>
         </th>
         <th>
@@ -86,21 +91,29 @@
         <th style="width: 50px;">Password Reset</th>
         <th style="border-right: none;">Actions</th>
     </tr>
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
+    <tr *ngFor="let item of user_management_data">
+        <td>
+
+            <label class="check-box_container">
+                <p>{{item.employee_id}}</p>
+                <input type="checkbox" [checked]="check">
+                <span class="checkmark"></span>
+            </label>
+
+        </td>
         <td class="th-top">
 
             <div class="user-icon">
                 <div class="user-icon-admin"></div>
             </div>
 
-            Connie Watson
+            {{item.employee_name}}
 
         </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
+        <td>{{item.email}}</td>
+        <td>{{item.role}}</td>
         <td>
-            <div class="th-top">********<div class="hide"></div>
+            <div class="th-top">{{item.password}}<div class="hide"></div>
             </div>
         </td>
         <td>
@@ -109,156 +122,13 @@
             </div>
 
         </td>
-        <td>Reset</td>
+        <td class="reset">{{item.password_reset}}</td>
         <td>
 
             <div class="actions">
 
-                <div class="edit" (click)="general.add_user=true"></div>
+                <div class="edit" (click)="general.edit_user=true"></div>
                 <div class="delete" (click)="general.showDialog=true"></div>
-            </div>
-        </td>
-    </tr>
-
-
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td class="th-top">
-
-            <div class="user-icon">
-                <div class="user-icon-admin"></div>
-            </div>
-
-            Connie Watson
-
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-            <div class="th-top">********<div class="hide"></div>
-            </div>
-        </td>
-        <td>
-            <div class="toggle">
-                <input type="checkbox">
-            </div>
-
-        </td>
-        <td>Reset</td>
-        <td>
-
-            <div class="actions">
-
-                <div class="edit"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-
-
-
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td class="th-top">
-
-            <div class="user-icon">
-                <div class="user-icon-admin"></div>
-            </div>
-
-            Connie Watson
-
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-            <div class="th-top">********<div class="hide"></div>
-            </div>
-        </td>
-        <td>
-            <div class="toggle">
-                <input type="checkbox">
-            </div>
-
-        </td>
-        <td>Reset</td>
-        <td>
-
-            <div class="actions">
-
-                <div class="edit"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-
-
-
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td class="th-top">
-
-            <div class="user-icon">
-                <div class="user-icon-admin"></div>
-            </div>
-
-            Connie Watson
-
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-            <div class="th-top">********<div class="hide"></div>
-            </div>
-        </td>
-        <td>
-            <div class="toggle">
-                <input type="checkbox">
-            </div>
-
-        </td>
-        <td>Reset</td>
-        <td>
-
-            <div class="actions">
-                <div class="edit"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-
-
-
-
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td class="th-top">
-
-            <div class="user-icon">
-                <div class="user-icon-admin"></div>
-            </div>
-
-            Connie Watson
-
-        </td>
-        <td>connie.watson@example.com</td>
-        <td>Manager</td>
-        <td>
-            <div class="th-top">********<div class="hide"></div>
-            </div>
-        </td>
-        <td>
-            <div class="toggle">
-                <input type="checkbox">
-            </div>
-
-        </td>
-        <td>Reset</td>
-        <td>
-
-            <div class="actions">
-
-                <div class="edit"></div>
-                <div class="delete"></div>
             </div>
         </td>
     </tr>
@@ -272,14 +142,14 @@
 
 <!-- user management edit modal-->
 
-<div class="model-add-user" *ngIf="general.add_user">
+<div class="model-add-user" *ngIf="general.edit_user">
     <div class="add-user">
 
         <div class="add-user-head">
 
             <h3>Edit User</h3>
 
-            <div class="cancel-icon" (click)="general.add_user=false"></div>
+            <div class="cancel-icon" (click)="general.edit_user=false"></div>
 
         </div>
 

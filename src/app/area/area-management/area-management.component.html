@@ -34,7 +34,7 @@
 
             <div class="actions">
 
-                <div class="edit"(click)="general.add_user=true"></div>
+                <div class="edit"(click)="general.edit_user=true"></div>
                 <div class="delete" (click)="general.showDialog=true"></div>
             </div>
         </td>
@@ -130,7 +130,7 @@
 <!-- add modal for area -->
 
 <div class="model-add-user" *ngIf="general.add_user">
-    <div class="add-user">
+    <div class="add-area">
 
         <div class="add-user-head">
 
@@ -140,18 +140,18 @@
 
         </div>
 
-        <form class="add-user-form">
+        <form class="add-area-form">
 
-            <div class="add-user-data">
+            <div class="add-area-data">
 
-                <div class="price-m-input">
+                <div class="add-area-input">
                     <label for="">Area Name</label>
                     <input type="text" placeholder="Enter Number">
                 </div>
 
             </div>
 
-            <div class="price-submit">
+            <div class="area-submit">
                 <button>ADD</button>
             </div>
         </form>
@@ -162,30 +162,29 @@
 </div>
 
 <!-- edit modal for Area Management -->
-
-<div class="model-add-user" *ngIf="general.add_user">
-    <div class="add-user">
+<div class="model-add-user" *ngIf="general.edit_user">
+    <div class="add-area">
 
         <div class="add-user-head">
 
             <h3>Edit Area</h3>
 
-            <div class="cancel-icon" (click)="general.add_user=false"></div>
+            <div class="cancel-icon" (click)="general.edit_user=false"></div>
 
         </div>
 
-        <form class="add-user-form">
+        <form class="add-area-form">
 
-            <div class="add-user-data">
+            <div class="add-area-data">
 
-                <div class="price-m-input">
+                <div class="add-area-input">
                     <label for="">Area Name</label>
                     <input type="text" placeholder="Enter Number">
                 </div>
 
             </div>
 
-            <div class="price-submit">
+            <div class="area-submit">
                 <button>UPDATE</button>
             </div>
         </form>
@@ -194,3 +193,4 @@
 
     </div>
 </div>
+

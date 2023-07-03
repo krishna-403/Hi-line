@@ -63,71 +63,70 @@
   height: 100%;
   background-color: rgb(0, 0, 0, 0.5);
   z-index: 1;
+}
+.add-user {
+  width: 850px;
+  height: 366px;
+  border: 1px solid #c0c0c0;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(192, 192, 192, 0.5);
 
-  .add-user {
-    width: 850px;
-    height: 366px;
-    border: 1px solid #c0c0c0;
-    background-color: #fff;
-    box-shadow: 0px 4px 4px 0px rgba(192, 192, 192, 0.5);
+  .add-user-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 2.6% 1% 2.5%;
 
-    .add-user-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin: 2% 2.6% 1% 2.5%;
-
-      h3 {
-        font-size: 20px;
-        font-family: Roboto;
-        font-weight: 700;
-        letter-spacing: 0.407px;
-        // padding: 15px;
-      }
-
-      .cancel-icon {
-        width: 15px;
-        height: 15px;
-        background-image: url("../icons/Cancel_Icon.svg");
-        background-size: cover;
-        cursor: pointer;
-      }
+    h3 {
+      font-size: 20px;
+      font-family: Roboto;
+      font-weight: 700;
+      letter-spacing: 0.407px;
+      // padding: 15px;
     }
 
-    .add-user-form {
-      width: 95%;
-      height: 80% !important;
-      // background-color: $tertiary-color-1;
-      margin-left: 2.5%;
-      // padding: 2.5%;
-      background-color: $tertiary-color-1;
-      box-shadow: 0px 4px 4px 0px rgba(192, 192, 192, 0.5);
-      .add-user-data {
+    .cancel-icon {
+      width: 15px;
+      height: 15px;
+      background-image: url("../icons/Cancel_Icon.svg");
+      background-size: cover;
+      cursor: pointer;
+    }
+  }
+
+  .add-user-form {
+    width: 95%;
+    height: 80%;
+    // background-color: $tertiary-color-1;
+    margin-left: 2.5%;
+    // padding: 2.5%;
+    background-color: $tertiary-color-1;
+    box-shadow: 0px 4px 4px 0px rgba(192, 192, 192, 0.5);
+    .add-user-data {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .add-user-input {
+        width: 385px;
+        height: 65px;
+        // background-color: red;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 7px;
+        margin: 15px 0 0 10px;
 
-        .add-user-input {
-          width: 385px;
-          height: 65px;
-          // background-color: red;
-          display: flex;
-          flex-direction: column;
-          gap: 7px;
-          margin: 15px 0 0 10px;
+        input {
+          width: 370px;
+          height: 35px;
+          border: 1px solid $neutral-color-3;
+          text-indent: 5px;
+        }
 
-          input {
-            width: 370px !important;
-            height: 35px;
-            border: 1px solid $neutral-color-3;
-            text-indent: 5px;
-          }
-
-          label {
-            font-size: 14px;
-            font-weight: 400px;
-            color: $neutral-color-2;
-          }
+        label {
+          font-size: 14px;
+          font-weight: 400px;
+          color: $neutral-color-2;
         }
       }
     }
@@ -150,6 +149,12 @@
   button {
     @include button;
   }
+}
+
+.reset {
+  color: $secondary-color;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .price-m-input {

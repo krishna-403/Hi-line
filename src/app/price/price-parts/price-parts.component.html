@@ -15,8 +15,13 @@
 <table>
     <tr>
         <th style="border-left: none;">
-            <div class="th-top"> <input class="checkbox" type="checkbox">Part# <div class="up-down-arrow"></div>
-            </div>
+        <div class="th-top"> <label class="check-box_container">
+                <p>Part#</p>
+                <input type="checkbox" (change)="change_input_check($event)">
+                <span class="checkmark"></span>
+            </label>
+            <div class="up-down-arrow"></div>
+        </div>
         </th>
         <th>
             <div class="th-top">Part Description <div class="up-down-arrow"></div>
@@ -36,124 +41,28 @@
         </th>
     </tr>
 
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td>This is part description long text</td>
+    <tr *ngFor="let item of part_management_data">
+        <td><label class="check-box_container">
+            <p>{{item.part}}</p>
+            <input type="checkbox" [checked]="check">
+            <span class="checkmark"></span>
+        </label></td>
+        <td>{{item.part_desc}}</td>
 
-        <td>3,300.00</td>
+        <td>{{item.cost_ea}}</td>
 
-        <td>3,400.00</td>
+        <td>{{item.price_ea}}</td>
 
         <td>
             <div class="actions">
 
-                <div class="edit" (click)="general.add_user=true"></div>
+                <div class="edit" (click)="general.edit_user=true"></div>
                 <div class="delete" (click)="general.showDialog=true"></div>
             </div>
         </td>
     </tr>
 
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td>This is part description long text</td>
-
-        <td>3,300.00</td>
-
-        <td>3,400.00</td>
-
-        <td>
-            <div class="actions">
-
-                <div class="edit" (click)="general.add_user=true"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td>This is part description long text</td>
-
-        <td>3,300.00</td>
-
-        <td>3,400.00</td>
-
-        <td>
-            <div class="actions">
-
-                <div class="edit"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td>This is part description long text</td>
-
-        <td>3,300.00</td>
-
-        <td>3,400.00</td>
-
-        <td>
-            <div class="actions">
-
-                <div class="edit"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td>This is part description long text</td>
-
-        <td>3,300.00</td>
-
-        <td>3,400.00</td>
-
-        <td>
-            <div class="actions">
-
-                <div class="edit"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td>This is part description long text</td>
-
-        <td>3,300.00</td>
-
-        <td>3,400.00</td>
-
-        <td>
-            <div class="actions">
-
-                <div class="edit"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td><input class="checkbox" type="checkbox">123456</td>
-        <td>This is part description long text</td>
-
-        <td>3,300.00</td>
-
-        <td>3,400.00</td>
-
-        <td>
-            <div class="actions">
-
-                <div class="edit" (click)="general.add_user=true"></div>
-                <div class="delete"></div>
-            </div>
-        </td>
-    </tr>
-
-
+    
 </table>
 <!-- add modal for price management -->
 <div class="model-add-user" *ngIf="general.add_user">
@@ -217,14 +126,14 @@
 
 <!-- edit modal for price management -->
 
-<div class="model-add-user" *ngIf="general.add_user">
+<div class="model-add-user" *ngIf="general.edit_user">
     <div class="add-user">
 
         <div class="add-user-head">
 
             <h3>Edit Part# - 123456</h3>
 
-            <div class="cancel-icon" (click)="general.add_user=false"></div>
+            <div class="cancel-icon" (click)="general.edit_user=false"></div>
 
         </div>
 

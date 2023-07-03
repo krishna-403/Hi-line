@@ -8,6 +8,70 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
 })
 export class ManagementComponent {
 
-  constructor(public general:LoginServiceService){}
+  constructor(public general: LoginServiceService) { }
 
+
+  change_input_check(event: any) {
+    if (event.target.checked == true) {
+      this.check = true;
+    }
+    else {
+      this.check = false;
+    }
+  }
+
+
+  public check = false;
+
+
+
+  public user_management_data = [
+    {
+      id: 1,
+      employee_id: 123456,
+      employee_name: 'Connie Watson',
+      email: 'connie.watson@example.com',
+      role: 'Manager',
+      password: '********',
+      password_reset: 'Reset',
+    },
+    {
+      id: 1,
+      employee_id: 123456,
+      employee_name: 'Connie Watson',
+      email: 'connie.watson@example.com',
+      role: 'Manager',
+      password: '********',
+      password_reset: 'Reset',
+    },
+    {
+      id: 1,
+      employee_id: 123456,
+      employee_name: 'Connie Watson',
+      email: 'connie.watson@example.com',
+      role: 'Manager',
+      password: '********',
+      password_reset: 'Reset',
+    },
+    {
+      id: 1,
+      employee_id: 123456,
+      employee_name: 'Connie Watson',
+      email: 'connie.watson@example.com',
+      role: 'Manager',
+      password: '********',
+      password_reset: 'Reset',
+    },
+    {
+      id: 1,
+      employee_id: 123456,
+      employee_name: 'Connie Watson',
+      email: 'connie.watson@example.com',
+      role: 'Manager',
+      password: '********',
+      password_reset: 'Reset',
+    }
+  ]
 }
+
+

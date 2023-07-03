@@ -7,9 +7,9 @@
                 <label for="">Job Numbers*</label>
                 <input type="text" name="job_number" placeholder="Enter number" formControlName="job_number"
                     autocomplete="off">
-                    <span class="barcode">
-                
-                    </span>
+                <span class="barcode">
+
+                </span>
                 <span class="error-msg" *ngIf="job_number && job_number.invalid && job_number.touched">Invalid Job
                     Number
                 </span>
@@ -52,11 +52,8 @@
         </div>
 
         <div class="add-inventory-submit">
-            <button class="btn" type="submit" [disabled]="!addInventory.valid" [class.notDisabled]="addInventory">Add</button>
+            <button class="btn" type="submit" [disabled]="!addInventory.valid"
+                [class.notDisabled]="addInventory">Add</button>
         </div>
-
     </form>
-
-
-
 </div>

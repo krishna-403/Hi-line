@@ -10,7 +10,7 @@ export class InventoryLogComponent {
 
 
 
-  public check = false;
+   check = false;
 
 
   //function to change all input checkbox in one click

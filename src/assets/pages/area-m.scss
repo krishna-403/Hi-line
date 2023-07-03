@@ -1,20 +1,31 @@
 .add-area {
+  // border: 1px solid #c0c0c0;
+  // background-color: #fff;
+  // box-shadow: 0px 4px 4px 0px rgba(192, 192, 192, 0.5);
   @extend .add-user;
   width: 750px !important;
   height: 250px !important;
 }
 
-.add-user-form {
+.add-area-form {
+  @extend .add-user-form;
   width: 95%;
-  height: 67% !important;
+  height: 60% !important;
 
-  .add-user-input {
-    input {
-      width: 175% !important;
+  .add-area-data {
+    @extend .add-user-data;
+    width: 100% !important;
+    .add-area-input {
+      @extend .add-user-input;
+      width: 100% !important;
+      input {
+        width: 97% !important;
+      }
     }
   }
 }
 
-.price-submit {
+.area-submit {
+  @extend .price-submit;
   padding: 3% 3.1%;
 }
