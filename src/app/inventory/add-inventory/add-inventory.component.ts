@@ -29,5 +29,28 @@ export class AddInventoryComponent {
     return this.addInventory.get('job_description');
   }
 
+  get area() {
+    return this.addInventory.get('area');
+  }
+
+
+  get part_number() {
+    return this.addInventory.get('part_number');
+  }
+
+
+  get part_description() {
+    return this.addInventory.get('part_description');
+  }
+
+
+  get quantity() {
+    return this.addInventory.get('quantity');
+  }
+
+
+  handleAddInventoryForm(){
+    console.log(this.addInventory.value)
+  }
 
 }

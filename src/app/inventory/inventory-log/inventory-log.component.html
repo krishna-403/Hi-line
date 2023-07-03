@@ -36,11 +36,11 @@
             </th>
             <th style="border-right: none;">Actions</th>
         </tr>
-        <tr *ngFor="let item of data">
+        <tr *ngFor="let item of inventory_data">
             <td style="text-align: center;">
 
                 <label class="check-box_container">
-                    <p>{{item.job_num}}</p>
+                    <p>{{item.job_id}}</p>
                     <input type="checkbox" [checked]="check">
                     <span class="checkmark"></span>
                 </label>
@@ -48,7 +48,7 @@
             </td>
             <td>{{item.job_desc}}</td>
             <td>{{item.date}}</td>
-            <td style="text-align: right;">{{item.quantity}}</td>
+            <td style="text-align: right;">{{item.total_quantity}}</td>
             <td class="table-open">{{item.invoiced}} <div class="table-dropdown-arrow-icon"></div>
             </td>
             <td>

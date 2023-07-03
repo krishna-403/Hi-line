@@ -1,16 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginServiceService } from 'src/app/services/login-service.service';
+import { TableDataService } from 'src/app/services/table-data.service';
 @Component({
   selector: 'app-inventory-log',
   templateUrl: './inventory-log.component.html',
   styleUrls: ['./inventory-log.component.scss']
 })
-export class InventoryLogComponent {
-  constructor(public general: LoginServiceService) { }
+export class InventoryLogComponent implements OnInit {
+  constructor(public general: LoginServiceService, private inventory: TableDataService) { }
 
+  ngOnInit(): void {
+    this.inventory_log()
+  }
 
+  check = false;
 
-   check = false;
+  inventory_data: any
 
 
   //function to change all input checkbox in one click
@@ -24,61 +29,12 @@ export class InventoryLogComponent {
     }
   }
 
+  inventory_log() {
+    this.inventory.table_data().subscribe((res) => {
 
+      console.log(res);
+      this.inventory_data=res;
+    })
+  }
 
-  public data = [
-    {
-      id: 1,
-      job_num: 123456,
-      job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
-      date: '10 / 22 / 2019',
-      quantity: 24,
-      invoiced: 'open',
-
-    },
-    {
-      id: 2,
-      job_num: 123456,
-      job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
-      date: '10 / 22 / 2019',
-      quantity: 24,
-      invoiced: 'open',
-    },
-    {
-      id: 3,
-      job_num: 123456,
-      job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
-      date: '10 / 22 / 2019',
-      quantity: 24,
-      invoiced: 'open',
-    },
-    {
-      id: 4,
-      job_num: 123456,
-      job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
-      date: '10 / 22 / 2019',
-      quantity: 24,
-      invoiced: 'open',
-
-    },
-    {
-      id: 5,
-      job_num: 123456,
-      job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
-      date: '10 / 22 / 2019',
-      quantity: 24,
-      invoiced: 'open',
-      checks: false
-
-    },
-    {
-      id: 6,
-      job_num: 123456,
-      job_desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.',
-      date: '10 / 22 / 2019',
-      quantity: 24,
-      invoiced: 'open',
-
-    }
-  ]
 }

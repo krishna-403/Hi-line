@@ -1,0 +1,62 @@
+{
+  "inventory_log": [
+    {
+      "id": 1,
+      "job_id":123456,
+      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "date": "10/22/2019",
+      "total_quantity": 24,
+      "invoiced": "open"
+    },
+    {
+      "id": 1,
+      "job_id":123456,
+      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "date": "10/22/2019",
+      "total_quantity": 24,
+      "invoiced": "open"
+    },
+    {
+      "id": 1,
+      "job_id":123456,
+      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "date": "10/22/2019",
+      "total_quantity": 24,
+      "invoiced": "open"
+    },
+    {
+      "id": 1,
+      "job_id":123456,
+      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "date": "10/22/2019",
+      "total_quantity": 24,
+      "invoiced": "open"
+    },
+    {
+      "id": 1,
+      "job_id":123456,
+      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "date": "10/22/2019",
+      "total_quantity": 24,
+      "invoiced": "open"
+    },
+    {
+      "id": 1,
+      "job_id":123456,
+      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "date": "10/22/2019",
+      "total_quantity": 24,
+      "invoiced": "open"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

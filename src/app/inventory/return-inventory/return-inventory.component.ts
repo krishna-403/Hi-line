@@ -28,4 +28,27 @@ export class ReturnInventoryComponent {
     return this.returnInventory.get('job_description');
   }
 
+  get area() {
+    return this.returnInventory.get('area');
+  }
+
+
+  get part_number() {
+    return this.returnInventory.get('part_number');
+  }
+
+
+  get part_description() {
+    return this.returnInventory.get('part_description');
+  }
+
+
+  get quantity() {
+    return this.returnInventory.get('quantity');
+  }
+
+handleReturnInventory(){
+  console.log(this.returnInventory.value)
+}
+
 }

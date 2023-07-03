@@ -1,59 +1,72 @@
 <div class="add-inventory-container">
-    <form [formGroup]="addInventory" class="add-inventory-form">
+    <form [formGroup]="addInventory" class="add-inventory-form" (ngSubmit)="handleAddInventoryForm()">
 
         <div class="add-inventory-data">
 
             <div class="add-inventory-input">
-                <label for="">Job Numbers*</label>
+                <label for="" [ngClass]="{'error':job_number && job_number.invalid && job_number.touched}">Job
+                    Numbers*</label>
                 <input type="text" name="job_number" placeholder="Enter number" formControlName="job_number"
                     autocomplete="off">
                 <span class="barcode">
 
                 </span>
-                <span class="error-msg" *ngIf="job_number && job_number.invalid && job_number.touched">Invalid Job
-                    Number
+                <span class="error-msg" *ngIf="job_number && job_number.invalid && job_number.touched">Field is required
                 </span>
             </div>
 
             <div class="add-inventory-input">
-                <label for="">Job Description*</label>
-
+                <label for=""
+                    [ngClass]="{'error':job_description && job_description.invalid && job_description.touched}">Job
+                    Description*</label>
                 <input type="text" placeholder="Enter text" formControlName="job_description">
                 <span class="error-msg"
-                    *ngIf="job_description && job_description.invalid && job_description.touched">Invalid
-                    Job Description
+                    *ngIf="job_description && job_description.invalid && job_description.touched">Field is required
                 </span>
             </div>
 
 
             <div class="add-inventory-input">
-                <label for="">Area</label>
+                <label for="" [ngClass]="{'error':area && area.invalid && area.touched}">Area</label>
                 <input type="text" placeholder="Enter text" formControlName="area">
+                <span class="error-msg" *ngIf="area && area.invalid && area.touched">Field is required
+                </span>
 
             </div>
 
             <div class="add-inventory-input">
-                <label for="">Part Number</label>
+                <label for="" [ngClass]="{'error':part_number && part_number.invalid && part_number.touched}">Part
+                    Number</label>
                 <input type="number" placeholder="Enter number" formControlName="part_number">
                 <span class="barcode">
                 </span>
+                <span class="error-msg" *ngIf="part_number && part_number.invalid && part_number.touched">Field is
+                    required
+                </span>
             </div>
 
             <div class="add-inventory-input">
-                <label for="">Part Description</label>
+                <label for=""
+                    [ngClass]="{'error':part_description && part_description.invalid && part_description.touched}">Part
+                    Description</label>
                 <input type="text" placeholder="Enter text" formControlName="part_description">
+                <span class="error-msg"
+                    *ngIf="part_description && part_description.invalid && part_description.touched">Field is required
+                </span>
             </div>
 
             <div class="add-inventory-input">
-                <label for="">Quantity</label>
+                <label for="" [ngClass]="{'error':quantity && quantity.invalid && quantity.touched}">Quantity</label>
                 <input type="number" placeholder="Enter number" formControlName="quantity">
+                <span class="error-msg" *ngIf="quantity && quantity.invalid && quantity.touched">Field is required
+                </span>
             </div>
 
         </div>
 
         <div class="add-inventory-submit">
             <button class="btn" type="submit" [disabled]="!addInventory.valid"
-                [class.notDisabled]="addInventory">Add</button>
+                [class.notDisabled]="addInventory.valid">Add</button>
         </div>
     </form>
 </div>
