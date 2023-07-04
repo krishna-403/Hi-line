@@ -1,17 +1,17 @@
 <div class="add-inventory-container">
-    <form [formGroup]="addInventory" class="add-inventory-form" (ngSubmit)="handleAddInventoryForm()">
+    <form [formGroup]="addInventory" class="add-inventory-form" (ngSubmit)="handleAddInventoryForm(addInventory.value)">
 
         <div class="add-inventory-data">
 
             <div class="add-inventory-input">
-                <label for="" [ngClass]="{'error':job_number && job_number.invalid && job_number.touched}">Job
+                <label for="" [ngClass]="{'error':job_id && job_id.invalid && job_id.touched}">Job
                     Numbers*</label>
-                <input type="text" name="job_number" placeholder="Enter number" formControlName="job_number"
+                <input type="text" name="job_id" placeholder="Enter number" formControlName="job_id"
                     autocomplete="off">
                 <span class="barcode">
 
                 </span>
-                <span class="error-msg" *ngIf="job_number && job_number.invalid && job_number.touched">Field is required
+                <span class="error-msg" *ngIf="job_id && job_id.invalid && job_id.touched">Field is required
                 </span>
             </div>
 

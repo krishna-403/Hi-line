@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { TableDataService } from 'src/app/services/table-data.service';
 
 @Component({
   selector: 'app-add-inventory',
@@ -8,11 +9,11 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class AddInventoryComponent {
 
-  constructor() { }
+  constructor( private add_inventory:TableDataService) { }
 
 
   addInventory = new FormGroup({
-    job_number: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]),
+    job_id: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]),
     job_description: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]),
     area: new FormControl('', [Validators.required]),
     part_number: new FormControl('', [Validators.required]),
@@ -21,7 +22,7 @@ export class AddInventoryComponent {
   })
 
 
-  get job_number() {
+  get job_id() {
     return this.addInventory.get('job_number');
   }
 
@@ -49,8 +50,11 @@ export class AddInventoryComponent {
   }
 
 
-  handleAddInventoryForm(){
-    console.log(this.addInventory.value)
+  handleAddInventoryForm(data: any){
+    // console.log(this.addInventory.value)
+    console.log(data)
+    this.add_inventory.add_inventory_table(data).subscribe((res)=>{
+      console.log(res);
+    })
   }
-
 }

@@ -15,13 +15,13 @@
 <table>
     <tr>
         <th style="border-left: none;">
-        <div class="th-top"> <label class="check-box_container">
-                <p>Part#</p>
-                <input type="checkbox" (change)="change_input_check($event)">
-                <span class="checkmark"></span>
-            </label>
-            <div class="up-down-arrow"></div>
-        </div>
+            <div class="th-top"> <label class="check-box_container">
+                    <p>Part#</p>
+                    <input type="checkbox" (change)="change_input_check($event)">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="up-down-arrow"></div>
+            </div>
         </th>
         <th>
             <div class="th-top">Part Description <div class="up-down-arrow"></div>
@@ -43,11 +43,11 @@
 
     <tr *ngFor="let item of part_management_data">
         <td><label class="check-box_container">
-            <p>{{item.part}}</p>
-            <input type="checkbox" [checked]="check">
-            <span class="checkmark"></span>
-        </label></td>
-        <td>{{item.part_desc}}</td>
+                <p>{{item.part}}</p>
+                <input type="checkbox" [checked]="check">
+                <span class="checkmark"></span>
+            </label></td>
+        <td>{{item.part_description}}</td>
 
         <td>{{item.cost_ea}}</td>
 
@@ -62,7 +62,7 @@
         </td>
     </tr>
 
-    
+
 </table>
 <!-- add modal for price management -->
 <div class="model-add-user" *ngIf="general.add_user">

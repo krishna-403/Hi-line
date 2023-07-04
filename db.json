@@ -2,61 +2,184 @@
   "inventory_log": [
     {
       "id": 1,
-      "job_id":123456,
-      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "job_id": 123456,
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
       "date": "10/22/2019",
-      "total_quantity": 24,
+      "quantity": 24,
       "invoiced": "open"
     },
     {
-      "id": 1,
-      "job_id":123456,
-      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "id": 2,
+      "job_id": 123456,
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
       "date": "10/22/2019",
-      "total_quantity": 24,
+      "quantity": 24,
       "invoiced": "open"
     },
     {
-      "id": 1,
-      "job_id":123456,
-      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "id": 3,
+      "job_id": 123456,
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
       "date": "10/22/2019",
-      "total_quantity": 24,
+      "quantity": 24,
       "invoiced": "open"
     },
     {
-      "id": 1,
-      "job_id":123456,
-      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "id": 4,
+      "job_id": 123456,
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
       "date": "10/22/2019",
-      "total_quantity": 24,
+      "quantity": 24,
       "invoiced": "open"
     },
     {
-      "id": 1,
-      "job_id":123456,
-      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "id": 5,
+      "job_id": 123456,
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
       "date": "10/22/2019",
-      "total_quantity": 24,
+      "quantity": 24,
       "invoiced": "open"
     },
     {
-      "id": 1,
-      "job_id":123456,
-      "job_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
+      "id": 6,
+      "job_id": 123456,
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
       "date": "10/22/2019",
-      "total_quantity": 24,
+      "quantity": 24,
       "invoiced": "open"
+    },
+    {
+      "job_id": "jewhfkew",
+      "job_description": "jkbdbk",
+      "area": "jksbdkj",
+      "part_number": 8789,
+      "part_description": "jbbbb",
+      "quantity": 8,
+      "id": 7
     }
   ],
-  "comments": [
+  "user_management": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "employee_id": 123456,
+      "employee_name": "Connie Watson",
+      "email": "connie.watson@example.com",
+      "role": "Manager",
+      "password": "********",
+      "password_reset": "Reset"
+    },
+    {
+      "id": 2,
+      "employee_id": 123456,
+      "employee_name": "Connie Watson",
+      "email": "connie.watson@example.com",
+      "role": "Manager",
+      "password": "********",
+      "password_reset": "Reset"
+    },
+    {
+      "id": 3,
+      "employee_id": 123456,
+      "employee_name": "Connie Watson",
+      "email": "connie.watson@example.com",
+      "role": "Manager",
+      "password": "********",
+      "password_reset": "Reset"
+    },
+    {
+      "id": 4,
+      "employee_id": 123456,
+      "employee_name": "Connie Watson",
+      "email": "connie.watson@example.com",
+      "role": "Manager",
+      "password": "********",
+      "password_reset": "Reset"
+    },
+    {
+      "id": 5,
+      "employee_id": 123456,
+      "employee_name": "Connie Watson",
+      "email": "connie.watson@example.com",
+      "role": "Manager",
+      "password": "********",
+      "password_reset": "Reset"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "part_management": [
+    {
+      "id": 1,
+      "part": 123456,
+      "part_description": "This is part description long text",
+      "cost_ea": "3,300.00",
+      "price_ea": "3,400.00"
+    },
+    {
+      "id": 2,
+      "part": 123456,
+      "part_description": "This is part description long text",
+      "cost_ea": "3,300.00",
+      "price_ea": "3,400.00"
+    },
+    {
+      "id": 3,
+      "part": 123456,
+      "part_description": "This is part description long text",
+      "cost_ea": "3,300.00",
+      "price_ea": "3,400.00"
+    },
+    {
+      "id": 4,
+      "part": 123456,
+      "part_description": "This is part description long text",
+      "cost_ea": "3,300.00",
+      "price_ea": "3,400.00"
+    },
+    {
+      "id": 5,
+      "part": 123456,
+      "part_description": "This is part description long text",
+      "cost_ea": "3,300.00",
+      "price_ea": "3,400.00"
+    },
+    {
+      "id": 6,
+      "part": 123456,
+      "part_description": "This is part description long text",
+      "cost_ea": "3,300.00",
+      "price_ea": "3,400.00"
+    },
+    {
+      "id": 7,
+      "part": 123456,
+      "part_description": "This is part description long text",
+      "cost_ea": "3,300.00",
+      "price_ea": "3,400.00"
+    }
+  ],
+  "area_management": [
+    {
+      "id": 1,
+      "area": "Lane 7"
+    },
+    {
+      "id": 1,
+      "area": "Lane 7"
+    },
+    {
+      "id": 1,
+      "area": "Lane 7"
+    },
+    {
+      "id": 1,
+      "area": "Lane 7"
+    },
+    {
+      "id": 1,
+      "area": "Lane 7"
+    },
+    {
+      "id": 1,
+      "area": "Lane 7"
+    }
+  ]
 }

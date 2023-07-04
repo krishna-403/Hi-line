@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginServiceService } from 'src/app/services/login-service.service';
+import { TableDataService } from 'src/app/services/table-data.service';
 
 @Component({
   selector: 'app-management',
@@ -8,7 +9,15 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
 })
 export class ManagementComponent {
 
-  constructor(public general: LoginServiceService) { }
+  constructor(public general: LoginServiceService, private management: TableDataService) { }
+
+
+  ngOnInit(): void {
+    this.user_management()
+  }
+
+  user_management_data: any
+  public check = false;
 
 
   change_input_check(event: any) {
@@ -20,58 +29,15 @@ export class ManagementComponent {
     }
   }
 
+  user_management() {
+    this.management.user_management_table().subscribe((res) => {
 
-  public check = false;
+      console.log(res);
+      this.user_management_data = res;
+    })
+  }
 
 
-
-  public user_management_data = [
-    {
-      id: 1,
-      employee_id: 123456,
-      employee_name: 'Connie Watson',
-      email: 'connie.watson@example.com',
-      role: 'Manager',
-      password: '********',
-      password_reset: 'Reset',
-    },
-    {
-      id: 1,
-      employee_id: 123456,
-      employee_name: 'Connie Watson',
-      email: 'connie.watson@example.com',
-      role: 'Manager',
-      password: '********',
-      password_reset: 'Reset',
-    },
-    {
-      id: 1,
-      employee_id: 123456,
-      employee_name: 'Connie Watson',
-      email: 'connie.watson@example.com',
-      role: 'Manager',
-      password: '********',
-      password_reset: 'Reset',
-    },
-    {
-      id: 1,
-      employee_id: 123456,
-      employee_name: 'Connie Watson',
-      email: 'connie.watson@example.com',
-      role: 'Manager',
-      password: '********',
-      password_reset: 'Reset',
-    },
-    {
-      id: 1,
-      employee_id: 123456,
-      employee_name: 'Connie Watson',
-      email: 'connie.watson@example.com',
-      role: 'Manager',
-      password: '********',
-      password_reset: 'Reset',
-    }
-  ]
 }
 
 

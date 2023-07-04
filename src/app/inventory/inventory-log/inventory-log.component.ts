@@ -30,10 +30,10 @@ export class InventoryLogComponent implements OnInit {
   }
 
   inventory_log() {
-    this.inventory.table_data().subscribe((res) => {
+    this.inventory.inventory_table().subscribe((res) => {
 
       console.log(res);
-      this.inventory_data=res;
+      this.inventory_data = res;
     })
   }
 

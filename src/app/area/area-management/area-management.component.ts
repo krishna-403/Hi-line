@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginServiceService } from 'src/app/services/login-service.service';
+import { TableDataService } from 'src/app/services/table-data.service';
 
 @Component({
   selector: 'app-area-management',
@@ -8,7 +9,14 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
 })
 export class AreaManagementComponent {
 
-  constructor(public general: LoginServiceService) { }
+  constructor(public general: LoginServiceService, private area_management_table: TableDataService) { }
+
+  ngOnInit(): void {
+    this.area_management()
+  }
+
+  area_management_data: any
+
 
   change_input_check(event: any) {
     if (event.target.checked == true) {
@@ -23,36 +31,14 @@ export class AreaManagementComponent {
   public check = false;
 
 
-  public area_management_data = [
-    {
-      id: 1,
-      area: 'Lane 7',
-    },
-    {
-      id: 1,
-      area: 'Lane 7',
-    },
-    {
-      id: 1,
-      area: 'Lane 7',
-    },
-    {
-      id: 1,
-      area: 'Lane 7',
-    },
-    {
-      id: 1,
-      area: 'Lane 7',
-    },
-    {
-      id: 1,
-      area: 'Lane 7',
-    },
+
+  area_management() {
+    this.area_management_table.area_management_table().subscribe((res) => {
+      console.log(res);
+      this.area_management_data = res;
+    })
+  }
   
-
-   
-
-  ]
 
 
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { LoginServiceService } from 'src/app/services/login-service.service';
+import { TableDataService } from 'src/app/services/table-data.service';
 
 @Component({
   selector: 'app-price-parts',
@@ -8,9 +9,14 @@ import { LoginServiceService } from 'src/app/services/login-service.service';
 })
 export class PricePartsComponent {
 
-  constructor(public general:LoginServiceService){}
+  constructor(public general: LoginServiceService, private part: TableDataService) { }
+
+  ngOnInit(): void {
+    this.part_management()
+  }
 
 
+  part_management_data: any
 
   public check = false;
 
@@ -26,65 +32,13 @@ export class PricePartsComponent {
     }
   }
 
+  part_management() {
+    this.part.part_management_table().subscribe((res) => {
+      console.log(res);
+      this.part_management_data = res;
+    })
+  }
 
-  public part_management_data = [
-    {
-      id: 1,
-      part: 123456,
-      part_desc: 'This is part description long text',
-      cost_ea: '3, 300.00',
-      price_ea: '3, 400.00',
-      
-    },
-    {
-      id: 1,
-      part: 123456,
-      part_desc: 'This is part description long text',
-      cost_ea: '3, 300.00',
-      price_ea: '3, 400.00',
 
-    },
-    {
-      id: 1,
-      part: 123456,
-      part_desc: 'This is part description long text',
-      cost_ea: '3, 300.00',
-      price_ea: '3, 400.00',
-
-    },
-    {
-      id: 1,
-      part: 123456,
-      part_desc: 'This is part description long text',
-      cost_ea: '3, 300.00',
-      price_ea: '3, 400.00',
-
-    },
-    {
-      id: 1,
-      part: 123456,
-      part_desc: 'This is part description long text',
-      cost_ea: '3, 300.00',
-      price_ea: '3, 400.00',
-
-    },
-    {
-      id: 1,
-      part: 123456,
-      part_desc: 'This is part description long text',
-      cost_ea: '3, 300.00',
-      price_ea: '3, 400.00',
-
-    },
-    {
-      id: 1,
-      part: 123456,
-      part_desc: 'This is part description long text',
-      cost_ea: '3, 300.00',
-      price_ea: '3, 400.00',
-
-    },
-    
-  ]
 
 }

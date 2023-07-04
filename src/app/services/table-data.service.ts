@@ -9,7 +9,25 @@ export class TableDataService {
 
   constructor(private http:HttpClient) { }
 
-  table_data(){
+  inventory_table(){
     return this.http.get('http://localhost:3000/inventory_log')
+  }
+
+  add_inventory_table(data: any) {
+    return this.http.post('http://localhost:3000/inventory_log', data)
+  }
+
+
+
+  user_management_table() {
+    return this.http.get('http://localhost:3000/user_management')
+  }
+
+  area_management_table() {
+    return this.http.get('http://localhost:3000/area_management')
+  }
+
+  part_management_table() {
+    return this.http.get('http://localhost:3000/part_management')
   }
 }
