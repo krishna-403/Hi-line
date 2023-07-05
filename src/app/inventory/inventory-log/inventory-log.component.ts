@@ -37,4 +37,9 @@ export class InventoryLogComponent implements OnInit {
     })
   }
 
+
+  abc() {
+console.log(this.inventory_data)
+  }
+
 }

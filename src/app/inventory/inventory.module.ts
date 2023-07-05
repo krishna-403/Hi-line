@@ -9,6 +9,7 @@ import { InventoryNavComponent } from './inventory-nav/inventory-nav.component';
 import { EditJobComponent } from './edit-job/edit-job.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AddInventoryComponent,
     InventoryLogComponent,
     InventoryNavComponent,
-    EditJobComponent
+    EditJobComponent,
+    IndexComponent
   ],
   imports: [
     CommonModule,

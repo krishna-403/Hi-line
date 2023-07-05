@@ -6,16 +6,22 @@
 </div>
 
 <div class="edit-job-d">
-    <form class="edit-job-form">
+    <form [formGroup]="edit_job" class="edit-job-form">
         <div class="edit-j-desc">
-            <label for="">Job Description</label>
-            <input type="text">
+            <label for=""
+                [ngClass]="{'error':job_description && job_description.invalid && job_description.touched}">Job
+                Description</label>
+            <input type="text" formControlName="job_description" >
+            <span class="err-msg" *ngIf="job_description && job_description.invalid && job_description.touched">Field
+                is required
+            </span>
         </div>
 
 
         <div class="add-inventory-submit">
 
-            <button>Update</button>
+            <button class="btn" type="submit" [disabled]="!edit_job.valid"
+                [class.notDisabled]="edit_job.valid">Update</button>
         </div>
     </form>
 </div>

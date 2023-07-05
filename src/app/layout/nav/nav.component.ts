@@ -19,4 +19,8 @@ export class NavComponent {
     this.routes.navigate(["/"])
     localStorage.removeItem('clicked_menu');
   }
+
+  // profile_setting(){
+  //   localStorage.removeItem('clicked_menu')
+  // }
 }

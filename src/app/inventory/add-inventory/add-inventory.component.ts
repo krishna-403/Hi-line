@@ -23,7 +23,7 @@ export class AddInventoryComponent {
 
 
   get job_id() {
-    return this.addInventory.get('job_number');
+    return this.addInventory.get('job_id');
   }
 
   get job_description() {

@@ -16,7 +16,7 @@ import { ProfileSettingModule } from './profile-setting/profile-setting.module';
 import { InterceptorInterceptor } from './interceptors/interceptor.interceptor';
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
 
     // LoginComponent,
   ],
@@ -35,6 +35,8 @@ import { InterceptorInterceptor } from './interceptors/interceptor.interceptor';
     SharedModule,
     ProfileSettingModule
   ],
+
+  
 
   providers: [
     {

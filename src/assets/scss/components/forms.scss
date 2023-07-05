@@ -81,5 +81,10 @@ align-items: center;
     font-size: 12px;
     font-weight: 400;
     text-align: left;
-    // margin-left: 52px;
+    margin-left: 52px;
+}
+
+.err-msg{
+@extend .error-msg;
+margin-left: 0 !important;
 }

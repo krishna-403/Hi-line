@@ -54,7 +54,7 @@
             <td>
                 <div class="actions">
                     <div class="print"></div>
-                    <div class="edit" routerLink="/edit-job"></div>
+                    <div class="edit" [routerLink]="['edit']" [queryParams]="{id:item.id}"></div>
                     <div class="delete" (click)="general.showDialog=true"></div>
                 </div>
             </td>

@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginServiceService } from 'src/app/services/login-service.service';
 import { TableDataService } from 'src/app/services/table-data.service';
+import { PasswordPipe } from 'src/app/shared/pipes/password.pipe';
 
 @Component({
   selector: 'app-management',
   templateUrl: './management.component.html',
-  styleUrls: ['./management.component.scss']
+  styleUrls: ['./management.component.scss'],
 })
-export class ManagementComponent {
+export class ManagementComponent implements OnInit {
 
-  constructor(public general: LoginServiceService, private management: TableDataService) { }
+  constructor(public general: LoginServiceService, private management: TableDataService, public maskString: PasswordPipe) { }
+  
 
 
   ngOnInit(): void {
