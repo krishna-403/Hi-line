@@ -17,9 +17,6 @@ export class EditJobComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe(params => {
       const userId = params['id'];
       console.log(userId);
-      
-      
-
     });
   }
 

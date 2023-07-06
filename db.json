@@ -15,38 +15,6 @@
       "date": "10/22/2019",
       "quantity": 24,
       "invoiced": "open"
-    },
-    {
-      "id": 3,
-      "job_id": 123456,
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
-      "date": "10/22/2019",
-      "quantity": 24,
-      "invoiced": "open"
-    },
-    {
-      "id": 4,
-      "job_id": 123456,
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
-      "date": "10/22/2019",
-      "quantity": 24,
-      "invoiced": "open"
-    },
-    {
-      "id": 5,
-      "job_id": 123456,
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
-      "date": "10/22/2019",
-      "quantity": 24,
-      "invoiced": "open"
-    },
-    {
-      "id": 6,
-      "job_id": 123456,
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
-      "date": "10/22/2019",
-      "quantity": 24,
-      "invoiced": "open"
     }
   ],
   "user_management": [

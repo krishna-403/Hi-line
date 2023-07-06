@@ -5,6 +5,7 @@ import { InventoryNavComponent } from './inventory-nav/inventory-nav.component';
 import { LoginAuthGuard } from '../guard/login-auth.guard';
 import { EditJobComponent } from './edit-job/edit-job.component';
 import { IndexComponent } from './index/index.component';
+import { ModalDeleteComponent } from '../shared/modal-delete/modal-delete.component';
 
 const routes: Routes = [
 
@@ -16,11 +17,12 @@ const routes: Routes = [
         path: '', redirectTo: 'inventory', pathMatch: 'full'
       },
       {
-        path: 'inventory', component: InventoryNavComponent
+        path: 'inventory', component: InventoryNavComponent,
+
       },
       {
-        path:'inventory/edit',component:EditJobComponent
-      }
+        path: 'inventory/edit', component: EditJobComponent
+      },
     ]
   }
 ];

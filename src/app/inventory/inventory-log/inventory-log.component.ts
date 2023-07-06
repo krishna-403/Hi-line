@@ -15,8 +15,9 @@ export class InventoryLogComponent implements OnInit {
 
   check = false;
 
-  inventory_data: any
-
+  inventory_data: any;
+  openDeleteModal: boolean = false;
+  deleteId: any;
 
   //function to change all input checkbox in one click
 
@@ -37,9 +38,34 @@ export class InventoryLogComponent implements OnInit {
     })
   }
 
+  deleteData(id: any) {
+    this.inventory.delete(id).subscribe((res) => {
+      console.log(res)
+      // this.ngOnInit();
+      this.inventory_log();
 
-  abc() {
-console.log(this.inventory_data)
+    })
   }
+
+
+  public send_id(id: any) {
+    this.deleteId = id;
+    console.log(id)
+    this.openDeleteModal = true;
+
+  }
+
+  closeModal(event: boolean) {
+    console.log(event)
+    this.openDeleteModal = event;
+  }
+
+  // delete_row(id: any) {
+  //   console.log(id)
+  //   // this.table_data.delete(id).subscribe((res) => {
+  //   //   console.log(res)
+  //   // })
+  // }
+
 
 }

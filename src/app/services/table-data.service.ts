@@ -17,6 +17,9 @@ export class TableDataService {
     return this.http.post('http://localhost:3000/inventory_log', data)
   }
 
+  delete(id:any){
+    return this.http.delete(`http://localhost:3000/inventory_log/${id}`)
+  }
 
 
   user_management_table() {

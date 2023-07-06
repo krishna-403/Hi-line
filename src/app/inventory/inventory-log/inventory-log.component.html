@@ -8,7 +8,7 @@
         </div>
     </div>
 
-    <app-modal-delete></app-modal-delete>
+    <!-- <app-modal-delete></app-modal-delete> -->
 
     <table>
         <tr>
@@ -55,9 +55,14 @@
                 <div class="actions">
                     <div class="print"></div>
                     <div class="edit" [routerLink]="['edit']" [queryParams]="{id:item.id}"></div>
-                    <div class="delete" (click)="general.showDialog=true"></div>
+                    <div class="delete" (click)="send_id(item.id)"></div>
                 </div>
             </td>
         </tr>
     </table>
 </div>
+
+<ng-container *ngIf="openDeleteModal">
+    <app-modal-delete [deleteId]="deleteId" (closeMdl)="closeModal($event)"
+        (deleteData)="deleteData($event)"></app-modal-delete>
+</ng-container>
