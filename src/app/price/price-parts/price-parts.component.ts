@@ -14,11 +14,20 @@ export class PricePartsComponent {
   ngOnInit(): void {
     this.part_management()
   }
+  openDeleteModal = false;
 
 
   part_management_data: any
 
-  public check = false;
+  check = false;
+  deleteId: any;
+
+
+  send_id(id: any) {
+    console.log(id)
+    this.deleteId = id;
+    this.openDeleteModal = true;
+  }
 
 
   //function to change all input checkbox in one click

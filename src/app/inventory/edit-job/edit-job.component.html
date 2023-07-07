@@ -6,12 +6,12 @@
 </div>
 
 <div class="edit-job-d">
-    <form [formGroup]="edit_job" class="edit-job-form">
+    <form [formGroup]="edit_job" class="edit-job-form" (ngSubmit)="handleEditDescriptionForm(edit_job.value)">
         <div class="edit-j-desc">
             <label for=""
                 [ngClass]="{'error':job_description && job_description.invalid && job_description.touched}">Job
                 Description</label>
-            <input type="text" formControlName="job_description" >
+            <input type="text" formControlName="job_description" ngModel="{{editDescriptionData.job_description}}">
             <span class="err-msg" *ngIf="job_description && job_description.invalid && job_description.touched">Field
                 is required
             </span>

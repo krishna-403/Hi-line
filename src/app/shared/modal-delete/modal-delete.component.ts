@@ -10,26 +10,25 @@ import { TableDataService } from 'src/app/services/table-data.service';
 })
 export class ModalDeleteComponent {
 
-  @Input() id: any;
+  // @Input() id: any;
   @Input() deleteId: any;
   @Output() closeMdl = new EventEmitter<any>();
   @Output() deleteData = new EventEmitter<any>();
   constructor(public general: LoginServiceService, private routes: Router, private table_data: TableDataService) { }
 
-  refreshComponent: boolean = false;
 
 
   // ngOnInit() {
   //   this.closeModal
   // }
-  data: any
+  // data: any
 
-  delete_row(id: any) {
-    console.log(id)
-    // this.table_data.delete(id).subscribe((res) => {
-    //   console.log(res)
-    // })
-  }
+  // delete_row(id: any) {
+  //   console.log(id)
+  //   // this.table_data.delete(id).subscribe((res) => {
+  //   //   console.log(res)
+  //   // })
+  // }
 
   // inventory_log() {
   //   this.table_data.inventory_table().subscribe((res) => {

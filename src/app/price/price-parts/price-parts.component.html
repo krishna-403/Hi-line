@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<app-modal-delete></app-modal-delete>
+
 
 <table>
     <tr>
@@ -57,7 +57,7 @@
             <div class="actions">
 
                 <div class="edit" (click)="general.edit_user=true"></div>
-                <div class="delete" (click)="general.showDialog=true"></div>
+                <div class="delete" (click)="send_id(item.id)"></div>
             </div>
         </td>
     </tr>
@@ -173,3 +173,8 @@
 
     </div>
 </div>
+
+<ng-container *ngIf="openDeleteModal" >
+
+    <app-modal-delete></app-modal-delete>
+</ng-container>

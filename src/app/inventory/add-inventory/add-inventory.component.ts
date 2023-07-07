@@ -9,12 +9,12 @@ import { TableDataService } from 'src/app/services/table-data.service';
 })
 export class AddInventoryComponent {
 
-  constructor( private add_inventory:TableDataService) { }
+  constructor(private add_inventory: TableDataService) { }
 
 
   addInventory = new FormGroup({
     job_id: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]),
-    job_description: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z0-9]+')]),
+    job_description: new FormControl('', [Validators.required]),
     area: new FormControl('', [Validators.required]),
     part_number: new FormControl('', [Validators.required]),
     part_description: new FormControl('', [Validators.required]),
@@ -50,10 +50,10 @@ export class AddInventoryComponent {
   }
 
 
-  handleAddInventoryForm(data: any){
+  handleAddInventoryForm(data: any) {
     // console.log(this.addInventory.value)
     console.log(data)
-    this.add_inventory.add_inventory_table(data).subscribe((res)=>{
+    this.add_inventory.add_inventory_table(data).subscribe((res) => {
       console.log(res);
     })
   }

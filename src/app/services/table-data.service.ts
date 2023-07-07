@@ -7,9 +7,9 @@ import { Observable } from 'rxjs';
 })
 export class TableDataService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  inventory_table(){
+  inventory_table() {
     return this.http.get('http://localhost:3000/inventory_log')
   }
 
@@ -17,8 +17,19 @@ export class TableDataService {
     return this.http.post('http://localhost:3000/inventory_log', data)
   }
 
-  delete(id:any){
+  delete(id: any) {
     return this.http.delete(`http://localhost:3000/inventory_log/${id}`)
+  }
+
+  getDescription(id: any) {
+    return this.http.get(`http://localhost:3000/inventory_log/${id}`)
+  }
+  updateDescription(data: any) {
+    return this.http.put(`http://localhost:3000/inventory_log/${data.id}`, data)
+  }
+
+  delete_user_management(id: any) {
+    return this.http.delete(`http://localhost:3000/user_management/${id}`)
   }
 
 

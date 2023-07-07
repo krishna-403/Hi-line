@@ -1,32 +1,69 @@
 {
   "inventory_log": [
     {
-      "id": 1,
-      "job_id": 123456,
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
-      "date": "10/22/2019",
-      "quantity": 24,
-      "invoiced": "open"
+      "job_description": "22",
+      "id": 13
     },
     {
-      "id": 2,
-      "job_id": 123456,
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.",
-      "date": "10/22/2019",
-      "quantity": 24,
-      "invoiced": "open"
+      "job_description": " 676yyfughjgjk",
+      "id": 14
+    },
+    {
+      "job_id": "123456",
+      "job_description": "vhafhg4564",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 15
+    },
+    {
+      "job_id": "123456",
+      "job_description": "nkur",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 16
+    },
+    {
+      "job_id": "123456",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 17
+    },
+    {
+      "job_id": "123456",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 18
+    },
+    {
+      "job_id": "123456",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 19
+    },
+    {
+      "job_id": "123456",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 20
     }
   ],
   "user_management": [
-    {
-      "id": 1,
-      "employee_id": 123456,
-      "employee_name": "Connie Watson",
-      "email": "connie.watson@example.com",
-      "role": "Manager",
-      "password": "********",
-      "password_reset": "Reset"
-    },
     {
       "id": 2,
       "employee_id": 123456,
@@ -47,15 +84,6 @@
     },
     {
       "id": 4,
-      "employee_id": 123456,
-      "employee_name": "Connie Watson",
-      "email": "connie.watson@example.com",
-      "role": "Manager",
-      "password": "********",
-      "password_reset": "Reset"
-    },
-    {
-      "id": 5,
       "employee_id": 123456,
       "employee_name": "Connie Watson",
       "email": "connie.watson@example.com",

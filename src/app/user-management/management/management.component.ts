@@ -11,7 +11,9 @@ import { PasswordPipe } from 'src/app/shared/pipes/password.pipe';
 export class ManagementComponent implements OnInit {
 
   constructor(public general: LoginServiceService, private management: TableDataService, public maskString: PasswordPipe) { }
-  
+
+  openDeleteModal = false;
+  deleteId: any;
 
 
   ngOnInit(): void {
@@ -39,6 +41,23 @@ export class ManagementComponent implements OnInit {
     })
   }
 
+  closeModal(event: boolean) {
+    console.log(event)
+    this.openDeleteModal = event;
+  }
+
+  send_id(id: any) {
+    console.log(id)
+    this.deleteId = id;
+    this.openDeleteModal = true;
+  }
+
+  deleteData(id: any) {
+    this.management.delete_user_management(id).subscribe((res) => {
+      console.log(res)
+      this.user_management();
+    })
+  }
 
 }
 

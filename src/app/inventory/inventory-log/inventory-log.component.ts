@@ -30,6 +30,8 @@ export class InventoryLogComponent implements OnInit {
     }
   }
 
+  //table data
+
   inventory_log() {
     this.inventory.inventory_table().subscribe((res) => {
 
@@ -38,17 +40,19 @@ export class InventoryLogComponent implements OnInit {
     })
   }
 
+
+//delete data from table
+
   deleteData(id: any) {
     this.inventory.delete(id).subscribe((res) => {
       console.log(res)
-      // this.ngOnInit();
       this.inventory_log();
 
     })
   }
 
 
-  public send_id(id: any) {
+   send_id(id: any) {
     this.deleteId = id;
     console.log(id)
     this.openDeleteModal = true;
