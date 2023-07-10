@@ -11,7 +11,7 @@
             <label for=""
                 [ngClass]="{'error':job_description && job_description.invalid && job_description.touched}">Job
                 Description</label>
-            <input type="text" formControlName="job_description" ngModel="{{editDescriptionData.job_description}}">
+            <input type="text" formControlName="job_description" ngModel="{{description}}">
             <span class="err-msg" *ngIf="job_description && job_description.invalid && job_description.touched">Field
                 is required
             </span>

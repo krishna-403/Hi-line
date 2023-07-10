@@ -24,6 +24,7 @@ export class EditJobComponent implements OnInit {
       this.edit.getDescription(userId).subscribe((data) => {
         console.log("data-", data);
         this.editDescriptionData = data;
+        this.description=this.editDescriptionData.job_description
         console.log("new-", this.editDescriptionData)
         // this.editDescriptionData = data;
         // this.description = this.editDescriptionData.job_description;
@@ -45,11 +46,11 @@ export class EditJobComponent implements OnInit {
   }
 
   handleEditDescriptionForm(data: any) {
-    console.log("my data ", data);    
-    console.log("updated", this.editDescriptionData)
+    // console.log("my data ", data);    
+    // console.log("updated", this.editDescriptionData)
 
-    this.editDescriptionData.job_description = data.job_description
-
+  this.editDescriptionData.job_description = data.job_description
+  
     this.edit.updateDescription(this.editDescriptionData).subscribe((res) => {
       console.log("new data", res);
 

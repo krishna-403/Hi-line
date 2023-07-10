@@ -1,30 +1,14 @@
 {
   "inventory_log": [
     {
-      "job_description": "22",
-      "id": 13
-    },
-    {
-      "job_description": " 676yyfughjgjk",
-      "id": 14
-    },
-    {
       "job_id": "123456",
-      "job_description": "vhafhg4564",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
       "area": "qwwd",
       "part_number": 787780218,
       "part_description": "sewfwe",
       "quantity": 23,
-      "id": 15
-    },
-    {
-      "job_id": "123456",
-      "job_description": "nkur",
-      "area": "qwwd",
-      "part_number": 787780218,
-      "part_description": "sewfwe",
-      "quantity": 23,
-      "id": 16
+      "id": 17,
+      "open":"Open"
     },
     {
       "job_id": "123456",
@@ -33,7 +17,8 @@
       "part_number": 787780218,
       "part_description": "sewfwe",
       "quantity": 23,
-      "id": 17
+      "id": 18,
+      "open":"Open"
     },
     {
       "job_id": "123456",
@@ -42,7 +27,8 @@
       "part_number": 787780218,
       "part_description": "sewfwe",
       "quantity": 23,
-      "id": 18
+      "id": 19,
+      "open":"Open"
     },
     {
       "job_id": "123456",
@@ -51,16 +37,28 @@
       "part_number": 787780218,
       "part_description": "sewfwe",
       "quantity": 23,
-      "id": 19
+      "id": 20,
+      "open":"Open"
     },
     {
-      "job_id": "123456",
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
-      "area": "qwwd",
-      "part_number": 787780218,
-      "part_description": "sewfwe",
-      "quantity": 23,
-      "id": 20
+      "job_id": "12345",
+      "job_description": "a",
+      "area": "jk",
+      "part_number": 3287,
+      "part_description": "jhj`",
+      "quantity": 878,
+      "id": 21,
+      "open":"Open"
+    },
+    {
+      "job_id": "12345",
+      "job_description": "bjvhdjavjhdhjadhvj",
+      "area": "jk",
+      "part_number": 3287,
+      "part_description": "jhj`",
+      "quantity": 878,
+      "id": 22,
+      "open":"Open"
     }
   ],
   "user_management": [

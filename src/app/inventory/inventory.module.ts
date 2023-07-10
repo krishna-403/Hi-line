@@ -8,7 +8,7 @@ import { InventoryLogComponent } from './inventory-log/inventory-log.component';
 import { InventoryNavComponent } from './inventory-nav/inventory-nav.component';
 import { EditJobComponent } from './edit-job/edit-job.component';
 import { SharedModule } from '../shared/shared.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IndexComponent } from './index/index.component';
 
 @NgModule({
@@ -24,7 +24,8 @@ import { IndexComponent } from './index/index.component';
     CommonModule,
     InventoryRoutingModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class InventoryModule { }

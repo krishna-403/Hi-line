@@ -44,4 +44,8 @@ export class TableDataService {
   part_management_table() {
     return this.http.get('http://localhost:3000/part_management')
   }
+
+  autoSearch(query: any){
+    return this.http.get(`http://localhost:3000/inventory_log?q=${query}`);
+  }
 }

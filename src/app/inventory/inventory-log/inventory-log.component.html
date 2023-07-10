@@ -3,7 +3,28 @@
 
     <div class="inventory-box-header">
         <p>Job Numbers</p>
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" (keyup)="seachAutoSuggestions($event)" (blur)="hideDropdown()" [(ngModel)]="searchText">
+
+        <ul class="dropdown" *ngIf="autoSuggestionResult">
+            <li *ngFor="let option of autoSuggestionResult">
+                <p href="">{{option.job_id}}</p>
+            </li>
+        </ul>
+
+
+        <!-- <div class="dropdown">
+    <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+        Dropdown
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li *ngFor="let option of dropdownOptions">
+            <a (click)="selectDropdownOption(option)">{{ option }}</a>
+        </li>
+    </ul>
+</div> -->
+
+
         <div class="download">DOWNLOAD DATA <div class="dropdown-arrow-icon"></div>
         </div>
     </div>
@@ -36,7 +57,7 @@
             </th>
             <th style="border-right: none;">Actions</th>
         </tr>
-        <tr *ngFor="let item of inventory_data">
+        <tr *ngFor="let item of inventory_data; let i = index">
             <td style="text-align: center;">
 
                 <label class="check-box_container">
@@ -49,7 +70,22 @@
             <td>{{item.job_description}}</td>
             <td>10/22/2019</td>
             <td style="text-align: right;">{{item.quantity}}</td>
-            <td class="table-open">open <div class="table-dropdown-arrow-icon"></div>
+            <td class="table-open" [style.color]="item.textColor">{{item.open}} <div class="table-dropdown-arrow-icon"
+                    (click)="toggle(item)">
+                    <!-- open toggle -->
+
+                    <div class="open-dropdown" *ngIf="item.isOpen">
+                        <div class="open" (click)="revertText(item)">
+                            <p>Open</p>
+                        </div>
+                        <div class="re-open" (click)="changeText(item)">
+                            <p>Re-open</p>
+                        </div>
+                    </div>
+
+                    <!-- open toggle -->
+
+                </div>
             </td>
             <td>
                 <div class="actions">
