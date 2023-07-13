@@ -3,7 +3,8 @@
 
     <div class="inventory-box-header">
         <p>Job Numbers</p>
-        <input type="text" placeholder="Search" (keyup)="seachAutoSuggestions($event)" (blur)="hideDropdown()" [(ngModel)]="searchText">
+        <input type="text" placeholder="Search" (keyup)="seachAutoSuggestions($event)" (blur)="hideDropdown()"
+            [(ngModel)]="searchText">
 
         <ul class="dropdown" *ngIf="autoSuggestionResult">
             <li *ngFor="let option of autoSuggestionResult">
@@ -57,7 +58,7 @@
             </th>
             <th style="border-right: none;">Actions</th>
         </tr>
-        <tr *ngFor="let item of inventory_data; let i = index">
+        <tr *ngFor="let item of new_data let i = index">
             <td style="text-align: center;">
 
                 <label class="check-box_container">
@@ -97,6 +98,34 @@
         </tr>
     </table>
 </div>
+<!-- <app-pagination [total_rows]="total_rows" [item_per_page]="new_data"></app-pagination> -->
+
+
+
+
+
+
+<!-- //pagination -->
+
+<div class="pagination">
+    <div class="pagination-box">
+        <div class="rows-p-p">
+            <p>Rows Per Page: {{itemsPerPage}}</p>
+            <div class="table-dropdown-arrow-icon"></div>
+        </div>
+
+        <div class="previous-next">
+            <span>{{initialValue+1 }} - {{finalValue}} of {{total_rows}}</span>
+            <button class="left-arrow" (click)="previousData()"></button>
+            <button class="right-arrow" [disabled]="disableNextButton" (click)="getDisplayedRows()"></button>
+
+        </div>
+    </div>
+
+
+</div>
+<!-- 
+pagination -->
 
 <ng-container *ngIf="openDeleteModal">
     <app-modal-delete [deleteId]="deleteId" (closeMdl)="closeModal($event)"

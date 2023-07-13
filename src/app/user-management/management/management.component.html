@@ -136,63 +136,62 @@
 
 <div class=" price-f">
 
-                    <button class="price-add" (click)="general.add_user=true">ADD</button>
+    <button class="price-add" (click)="general.add_user=true">ADD</button>
 
+</div>
+
+<!-- user management edit modal-->
+
+<div class="model-add-user" *ngIf="general.edit_user">
+    <div class="add-user">
+
+        <div class="add-user-head">
+
+            <h3>Edit User</h3>
+
+            <div class="cancel-icon" (click)="general.edit_user=false"></div>
+
+        </div>
+
+        <form class="add-user-form">
+
+            <div class="add-user-data">
+
+                <div class="add-user-input">
+                    <label for="">Employee Id*</label>
+                    <input type="text" placeholder="Enter Number">
                 </div>
 
-                <!-- user management edit modal-->
-
-                <div class="model-add-user" *ngIf="general.edit_user">
-                    <div class="add-user">
-
-                        <div class="add-user-head">
-
-                            <h3>Edit User</h3>
-
-                            <div class="cancel-icon" (click)="general.edit_user=false"></div>
-
-                        </div>
-
-                        <form class="add-user-form">
-
-                            <div class="add-user-data">
-
-                                <div class="add-user-input">
-                                    <label for="">Employee Id*</label>
-                                    <input type="text" placeholder="Enter Number">
-                                </div>
-
-                                <div class="add-user-input">
-                                    <label for="">Employee Name*</label>
-                                    <input type="text" placeholder="Enter Number">
-                                </div>
-
-                                <div class="add-user-input">
-                                    <label for="">Select Role</label>
-                                    <input type="text" placeholder="Enter Number">
-                                </div>
-
-                                <div class="add-user-input">
-                                    <label for="">Password</label>
-                                    <input type="text" placeholder="Enter Number">
-                                </div>
-
-                                <div class="add-user-input">
-                                    <label for="">Email</label>
-                                    <input type="text" placeholder="Enter Number">
-                                </div>
-                            </div>
-
-                            <div class="add-user-submit">
-                                <button>Update</button>
-                            </div>
-                        </form>
-
-                    </div>
+                <div class="add-user-input">
+                    <label for="">Employee Name*</label>
+                    <input type="text" placeholder="Enter Number">
                 </div>
 
-                <ng-container *ngIf="openDeleteModal">
-                    <app-modal-delete (closeMdl)="closeModal($event)" [deleteId]="deleteId"
-                    (deleteData)="deleteData($event)"
-                    ></app-modal-delete>
-                </ng-container>
+                <div class="add-user-input">
+                    <label for="">Select Role</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+                <div class="add-user-input">
+                    <label for="">Password</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+
+                <div class="add-user-input">
+                    <label for="">Email</label>
+                    <input type="text" placeholder="Enter Number">
+                </div>
+            </div>
+
+            <div class="add-user-submit">
+                <button>Update</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<ng-container *ngIf="openDeleteModal">
+    <app-modal-delete (closeMdl)="closeModal($event)" [deleteId]="deleteId"
+        (deleteData)="deleteData($event)"></app-modal-delete>
+</ng-container>

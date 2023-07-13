@@ -45,6 +45,7 @@ export class ModalDeleteComponent {
 
   closeModal() {
     this.closeMdl.emit(false);
+    console.log(this.deleteId)
   }
 
 }

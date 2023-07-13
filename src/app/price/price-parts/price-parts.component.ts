@@ -11,16 +11,16 @@ export class PricePartsComponent {
 
   constructor(public general: LoginServiceService, private part: TableDataService) { }
 
+  openDeleteModal = false;
+  deleteId: any;
+
   ngOnInit(): void {
     this.part_management()
   }
-  openDeleteModal = false;
-
 
   part_management_data: any
 
   check = false;
-  deleteId: any;
 
 
   send_id(id: any) {
@@ -48,6 +48,16 @@ export class PricePartsComponent {
     })
   }
 
+  closeModal(event: boolean) {
+    console.log(event)
+    this.openDeleteModal = event;
+  }
 
+  deleteData(id: any) {
+    this.part.delete_part_management(id).subscribe((res) => {
+      console.log(res)
+      this.part_management();
+    })
+  }
 
 }

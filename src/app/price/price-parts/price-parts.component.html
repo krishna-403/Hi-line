@@ -176,5 +176,6 @@
 
 <ng-container *ngIf="openDeleteModal" >
 
-    <app-modal-delete></app-modal-delete>
+    <app-modal-delete (closeMdl)="closeModal($event)" [deleteId]="deleteId"
+    (deleteData)="deleteData($event)"></app-modal-delete>
 </ng-container>

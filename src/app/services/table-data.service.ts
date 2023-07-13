@@ -41,8 +41,16 @@ export class TableDataService {
     return this.http.get('http://localhost:3000/area_management')
   }
 
+  delete_area_management(id: any) {
+    return this.http.delete(`http://localhost:3000/area_management/${id}`)
+  }
+
   part_management_table() {
     return this.http.get('http://localhost:3000/part_management')
+  }
+
+  delete_part_management(id: any) {
+    return this.http.delete(`http://localhost:3000/part_management/${id}`)
   }
 
   autoSearch(query: any){

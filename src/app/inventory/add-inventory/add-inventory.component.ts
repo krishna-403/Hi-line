@@ -49,9 +49,11 @@ export class AddInventoryComponent {
     return this.addInventory.get('quantity');
   }
 
+  open:any ='Open'
 
   handleAddInventoryForm(data: any) {
     // console.log(this.addInventory.value)
+    data.open=this.open;
     console.log(data)
     this.add_inventory.add_inventory_table(data).subscribe((res) => {
       console.log(res);

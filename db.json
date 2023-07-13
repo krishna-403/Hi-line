@@ -8,27 +8,7 @@
       "part_description": "sewfwe",
       "quantity": 23,
       "id": 17,
-      "open":"Open"
-    },
-    {
-      "job_id": "123456",
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
-      "area": "qwwd",
-      "part_number": 787780218,
-      "part_description": "sewfwe",
-      "quantity": 23,
-      "id": 18,
-      "open":"Open"
-    },
-    {
-      "job_id": "123456",
-      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
-      "area": "qwwd",
-      "part_number": 787780218,
-      "part_description": "sewfwe",
-      "quantity": 23,
-      "id": 19,
-      "open":"Open"
+      "open": "Open"
     },
     {
       "job_id": "123456",
@@ -38,7 +18,7 @@
       "part_description": "sewfwe",
       "quantity": 23,
       "id": 20,
-      "open":"Open"
+      "open": "Open"
     },
     {
       "job_id": "12345",
@@ -48,7 +28,7 @@
       "part_description": "jhj`",
       "quantity": 878,
       "id": 21,
-      "open":"Open"
+      "open": "Open"
     },
     {
       "job_id": "12345",
@@ -58,7 +38,106 @@
       "part_description": "jhj`",
       "quantity": 878,
       "id": 22,
-      "open":"Open"
+      "open": "Open"
+    },
+    {
+      "job_id": "098",
+      "job_description": "dummy 9",
+      "area": "bbhjB",
+      "part_number": 87878,
+      "part_description": "mbj",
+      "quantity": 78,
+      "open": "Open",
+      "id": 32
+    },
+    {
+      "job_id": "0987",
+      "job_description": "dummy",
+      "area": "78698",
+      "part_number": 8998,
+      "part_description": "njkhdbkh",
+      "quantity": 87,
+      "open": "Open",
+      "id": 33
+    },
+    {
+      "job_id": "45646",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas.",
+      "area": "87",
+      "part_number": 8788,
+      "part_description": "hbvbk",
+      "quantity": 899,
+      "open": "Open",
+      "id": 34
+    },
+    {
+      "job_id": "45434",
+      "job_description": "consectetur adipisicing elit. Voluptatibus, voluptas.",
+      "area": "87",
+      "part_number": 8788,
+      "part_description": "hbvbk",
+      "quantity": 899,
+      "open": "Open",
+      "id": 35
+    },
+    {
+      "job_id": "09887",
+      "job_description": "consectetur adipisicing elit. ",
+      "area": "87",
+      "part_number": 8788,
+      "part_description": "hbvbk",
+      "quantity": 345,
+      "open": "Open",
+      "id": 36
+    },
+    {
+      "job_id": "565909",
+      "job_description": "consectetur adipisicing ",
+      "area": "98790",
+      "part_number": 8788,
+      "part_description": "hbvbk",
+      "quantity": 345990,
+      "open": "Open",
+      "id": 37
+    },
+    {
+      "job_id": "123456",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 38,
+      "open": "Open"
+    },{
+      "job_id": "123456",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 41,
+      "open": "Open"
+    },
+    {
+      "job_id": "123456",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 54,
+      "open": "Open"
+    },
+    {
+      "job_id": "123456",
+      "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
+      "area": "qwwd",
+      "part_number": 787780218,
+      "part_description": "sewfwe",
+      "quantity": 23,
+      "id": 67,
+      "open": "Open"
     }
   ],
   "user_management": [
@@ -82,6 +161,24 @@
     },
     {
       "id": 4,
+      "employee_id": 123456,
+      "employee_name": "Connie Watson",
+      "email": "connie.watson@example.com",
+      "role": "Manager",
+      "password": "********",
+      "password_reset": "Reset"
+    },
+    {
+      "id": 5,
+      "employee_id": 123456,
+      "employee_name": "Connie Watson",
+      "email": "connie.watson@example.com",
+      "role": "Manager",
+      "password": "********",
+      "password_reset": "Reset"
+    },
+    {
+      "id": 6,
       "employee_id": 123456,
       "employee_name": "Connie Watson",
       "email": "connie.watson@example.com",
@@ -128,13 +225,6 @@
     },
     {
       "id": 6,
-      "part": 123456,
-      "part_description": "This is part description long text",
-      "cost_ea": "3,300.00",
-      "price_ea": "3,400.00"
-    },
-    {
-      "id": 7,
       "part": 123456,
       "part_description": "This is part description long text",
       "cost_ea": "3,300.00",

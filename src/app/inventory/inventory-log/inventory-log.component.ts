@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LoginServiceService } from 'src/app/services/login-service.service';
 import { TableDataService } from 'src/app/services/table-data.service';
+import { v4 as uuidv4 } from 'uuid';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 @Component({
@@ -12,10 +13,16 @@ export class InventoryLogComponent implements OnInit {
   constructor(public general: LoginServiceService, private inventory: TableDataService) { }
 
   ngOnInit(): void {
-    this.inventory_log()
+    this.inventory_log();
+
+
   }
 
+
+
   check = false;
+  // uniqueId = uuidv4();
+
 
   inventory_data: any;
   openDeleteModal: boolean = false;
@@ -37,13 +44,30 @@ export class InventoryLogComponent implements OnInit {
     }
   }
 
+  initialValue: any = 0;
+  finalValue: any = 6;
   //table data
-  
+  new_data: Array<any>
+  total_rows: any;
 
+  displayData: any;
   inventory_log() {
     this.inventory.inventory_table().subscribe((res) => {
       console.log(res);
       this.inventory_data = res;
+      this.displayData = this.inventory_data;
+      // console.log('length', this.inventory_data.length)
+      this.total_rows = this.displayData.length;
+      if (this.total_rows > 5) {
+        this.new_data = this.displayData.slice(this.initialValue, this.finalValue);
+        console.log('abc', this.new_data,)
+
+        // console.log('abc', this.total_rows)
+      } else {
+        this.currentPage = false;
+        this.disableNextButton = false;
+      }
+
     })
   }
 
@@ -66,6 +90,8 @@ export class InventoryLogComponent implements OnInit {
 
   }
 
+
+
   closeModal(event: boolean) {
     console.log(event)
     this.openDeleteModal = event;
@@ -75,13 +101,22 @@ export class InventoryLogComponent implements OnInit {
     row.isOpen = !row.isOpen;
   }
 
+  invoiced = {
+    id: uuidv4(),
+    name: 'Open'
+  };
+
   changeText(row: any) {
-    row.open = "Re-open"
+    // this.invoiced.name = "Re-open";
+    // row.invoiced.name = "Re-open";
+    // console.log(row)
+    row.open = 'Re-open'
     row.textColor = "#F2994A";
   }
 
 
   revertText(row: any) {
+    // this.invoiced.name = "Open"
     row.open = "Open"
     row.textColor = "#219653"
   }
@@ -101,63 +136,95 @@ export class InventoryLogComponent implements OnInit {
         }
         this.autoSuggestionResult = resp;
         this.inventory_data = resp;
-        if(resp.value==''){
-          
+        if (resp.value == '') {
+
         }
       })
-    } 
+    }
   }
 
-  hideDropdown() {  
+  hideDropdown() {
     this.autoSuggestionResult = undefined
   }
 
 
 
-  // search dropdown
 
+  // Pagination
 
+  rows_per_page: any;
+  disableNextButton: boolean = false;
+  currentPage: any = 1
+  // inventory_data: any;
 
+  // inventory_log() {
+  //   this.inventory.inventory_table().subscribe((res: any) => {
+  //     console.log(res);
+  //     this.inventory_data = res;
+  //     // console.log('length', this.inventory_data.length)
+  //     this.total_rows = this.inventory_data.length;
+  //     this.itemsPerPage = 6;
 
-  // searchText: any;
-  // options: string[] = ['Option 1', 'Option 2', 'Option 3', 'Option 4'];
-  // filteredOptions: string[] = [];
-  // showDropdown: boolean = false;
-
-  // filterOptions() {
-  //   this.filteredOptions = this.options.filter(option => option.toLowerCase().includes(this.searchText.toLowerCase()));
-  //   this.showDropdown = true;
+  //   })
   // }
 
-  // hideDropdown() {
-  //   setTimeout(() => {
-  //     this.showDropdown = false;
-  //   }, 200);
-  // }
 
-  // selectOption(option: string) {
-  //   this.searchText = option;
-  //   this.showDropdown = false;
-  // }
+  // Pagination properties
+  // currentPage: number = 1;
+  itemsPerPage: any = 6;
+  totalItems: any = 11;
+  items: any[] = [];
 
-  // searchInput: any = '';
-  // searchResults: any[] = [];
-  // dropdownOptions: any[] = [];
 
-  // onSearchInputChange() {
-  //   // Filter the tableData based on the search input
-  //   // this.searchResults = this.inventory_data.filter(item => item.id.includes(this.searchInput));
+  nextPage(): void {
+    const totalPages = Math.ceil(this.total_rows.length / this.itemsPerPage);
+    if (this.currentPage < totalPages) {
+      this.currentPage++;
+    }
+  }
 
-  //   // Populate the dropdownOptions array with the matching IDs
-  //   this.dropdownOptions = this.searchResults.map(item => item.id);
-  // }
 
-  // selectDropdownOption(option: string) {
-  //   // Perform any necessary action when a dropdown option is selected
-  //   // For example, you can update the UI or perform a specific task.
-  //   console.log('Selected option:', option);
-  // }
+  get totalPages(): number {
+    return Math.ceil(this.total_rows / this.itemsPerPage);
+  }
+
+
+  changePage(page: number) {
+    this.currentPage = page;
+    console.log(this.currentPage)
+    this.inventory_log()
+  }
+
+  next_page_data: any
+
+  getDisplayedRows(): any {
+    console.log(this.new_data)
+    this.initialValue = this.finalValue;
+    this.finalValue = this.initialValue + 6;
+    console.log(this.finalValue)
+    if (this.finalValue <= this.displayData.length) {
+      this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
+    } else {
+      this.disableNextButton = true;
+      this.new_data = this.displayData.slice(this.initialValue, this.displayData.length)
+    }
+    // this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
+
+  }
+
+  previousData() {
+    console.log(this.initialValue);
+    console.log(this.finalValue);
+    // console.log('abc', this.new_data)
+    // this.initialValue = this.initialValue - 6;
+    // this.finalValue = this.initialValue;
+    // this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
+    // console.log('abc', this.new_data)
+  }
+
+  //pagination
+
+
 }
-
 
 
