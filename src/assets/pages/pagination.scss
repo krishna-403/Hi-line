@@ -40,19 +40,23 @@
   width: 10px;
   height: 16px;
   background-image: url("../icons/left.svg");
-  background-size: cover;
+  background-size: 100% 100%;
   cursor: pointer;
   margin-left: 26px;
   border: none;
+  background-color: transparent;
 }
 
 .right-arrow {
   width: 10px;
   height: 16px;
   background-image: url("../icons/right-arrow.svg");
-  background-size: cover;
+  // background-size: cover;
   cursor: pointer;
   margin-left: 30px;
   border: none;
+  background-size: 100% 100%;
+  background-color: transparent;
+
 
 }

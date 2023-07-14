@@ -1,7 +1,7 @@
 {
   "inventory_log": [
     {
-      "job_id": "123456",
+      "job_id": "1",
       "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
       "area": "qwwd",
       "part_number": 787780218,
@@ -11,7 +11,7 @@
       "open": "Open"
     },
     {
-      "job_id": "123456",
+      "job_id": "2",
       "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
       "area": "qwwd",
       "part_number": 787780218,
@@ -21,7 +21,7 @@
       "open": "Open"
     },
     {
-      "job_id": "12345",
+      "job_id": "3",
       "job_description": "a",
       "area": "jk",
       "part_number": 3287,
@@ -31,7 +31,7 @@
       "open": "Open"
     },
     {
-      "job_id": "12345",
+      "job_id": "4",
       "job_description": "bjvhdjavjhdhjadhvj",
       "area": "jk",
       "part_number": 3287,
@@ -41,7 +41,7 @@
       "open": "Open"
     },
     {
-      "job_id": "098",
+      "job_id": "5",
       "job_description": "dummy 9",
       "area": "bbhjB",
       "part_number": 87878,
@@ -51,7 +51,7 @@
       "id": 32
     },
     {
-      "job_id": "0987",
+      "job_id": "6",
       "job_description": "dummy",
       "area": "78698",
       "part_number": 8998,
@@ -61,7 +61,7 @@
       "id": 33
     },
     {
-      "job_id": "45646",
+      "job_id": "7",
       "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas.",
       "area": "87",
       "part_number": 8788,
@@ -71,7 +71,7 @@
       "id": 34
     },
     {
-      "job_id": "45434",
+      "job_id": "8",
       "job_description": "consectetur adipisicing elit. Voluptatibus, voluptas.",
       "area": "87",
       "part_number": 8788,
@@ -81,7 +81,7 @@
       "id": 35
     },
     {
-      "job_id": "09887",
+      "job_id": "9",
       "job_description": "consectetur adipisicing elit. ",
       "area": "87",
       "part_number": 8788,
@@ -91,7 +91,7 @@
       "id": 36
     },
     {
-      "job_id": "565909",
+      "job_id": "10",
       "job_description": "consectetur adipisicing ",
       "area": "98790",
       "part_number": 8788,
@@ -101,7 +101,7 @@
       "id": 37
     },
     {
-      "job_id": "123456",
+      "job_id": "11",
       "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
       "area": "qwwd",
       "part_number": 787780218,
@@ -110,7 +110,7 @@
       "id": 38,
       "open": "Open"
     },{
-      "job_id": "123456",
+      "job_id": "12",
       "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
       "area": "qwwd",
       "part_number": 787780218,
@@ -120,7 +120,7 @@
       "open": "Open"
     },
     {
-      "job_id": "123456",
+      "job_id": "13",
       "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
       "area": "qwwd",
       "part_number": 787780218,
@@ -130,7 +130,7 @@
       "open": "Open"
     },
     {
-      "job_id": "123456",
+      "job_id": "14",
       "job_description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, voluptas minus.\t",
       "area": "qwwd",
       "part_number": 787780218,

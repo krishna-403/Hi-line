@@ -4,6 +4,7 @@ import { TableDataService } from 'src/app/services/table-data.service';
 import { v4 as uuidv4 } from 'uuid';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { flip } from '@popperjs/core';
 @Component({
   selector: 'app-inventory-log',
   templateUrl: './inventory-log.component.html',
@@ -14,15 +15,11 @@ export class InventoryLogComponent implements OnInit {
 
   ngOnInit(): void {
     this.inventory_log();
-
-
+    this.disablePreviousBtn = true;
   }
-
-
 
   check = false;
   // uniqueId = uuidv4();
-
 
   inventory_data: any;
   openDeleteModal: boolean = false;
@@ -51,20 +48,20 @@ export class InventoryLogComponent implements OnInit {
   total_rows: any;
 
   displayData: any;
+  renderPrev: any;
   inventory_log() {
     this.inventory.inventory_table().subscribe((res) => {
       console.log(res);
       this.inventory_data = res;
       this.displayData = this.inventory_data;
+      this.renderPrev = this.inventory_data
       // console.log('length', this.inventory_data.length)
       this.total_rows = this.displayData.length;
       if (this.total_rows > 5) {
         this.new_data = this.displayData.slice(this.initialValue, this.finalValue);
-        console.log('abc', this.new_data,)
-
+        // console.log('abc', this.new_data,)
         // console.log('abc', this.total_rows)
       } else {
-        this.currentPage = false;
         this.disableNextButton = false;
       }
 
@@ -128,14 +125,14 @@ export class InventoryLogComponent implements OnInit {
     if (query) {
       const result = query.target as HTMLInputElement;
       // console.log('abc', result)
-      console.log('mbc', result.value)
+      // console.log('mbc', result.value)
       this.inventory.autoSearch(result.value).subscribe((resp: any) => {
         console.log(resp);
         if (resp.length > 4) {
           resp.length = 4;
         }
         this.autoSuggestionResult = resp;
-        this.inventory_data = resp;
+        this.new_data = resp;
         if (resp.value == '') {
 
         }
@@ -197,28 +194,45 @@ export class InventoryLogComponent implements OnInit {
 
   next_page_data: any
 
-  getDisplayedRows(): any {
+  getDisplayedRows(){
     console.log(this.new_data)
     this.initialValue = this.finalValue;
     this.finalValue = this.initialValue + 6;
     console.log(this.finalValue)
-    if (this.finalValue <= this.displayData.length) {
+    if (this.finalValue <= this.inventory_data.length) {
       this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
+      this.disablePreviousBtn = false;
+      console.log(this.new_data);
+
+
     } else {
+      this.finalValue = this.displayData.length
+      this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
       this.disableNextButton = true;
-      this.new_data = this.displayData.slice(this.initialValue, this.displayData.length)
     }
     // this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
-
   }
 
+  disablePreviousBtn: boolean;
   previousData() {
-    console.log(this.initialValue);
-    console.log(this.finalValue);
+    console.log('abc', this.displayData)
+    this.initialValue = this.initialValue - 6
+    this.finalValue = this.initialValue + 6;
+    console.log("previous", this.initialValue);
+    console.log("previous", this.finalValue);
+
     // console.log('abc', this.new_data)
     // this.initialValue = this.initialValue - 6;
     // this.finalValue = this.initialValue;
-    // this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
+
+    if (this.initialValue == 0) {
+      this.disablePreviousBtn = true;
+      this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
+    } else {
+      this.disableNextButton = false;
+      this.new_data = this.displayData.slice(this.initialValue, this.finalValue)
+      console.log('new', this.new_data)
+    }
     // console.log('abc', this.new_data)
   }
 
@@ -226,5 +240,6 @@ export class InventoryLogComponent implements OnInit {
 
 
 }
+
 
 

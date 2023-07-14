@@ -116,7 +116,7 @@
 
         <div class="previous-next">
             <span>{{initialValue+1 }} - {{finalValue}} of {{total_rows}}</span>
-            <button class="left-arrow" (click)="previousData()"></button>
+            <button class="left-arrow" [disabled]="disablePreviousBtn" (click)="previousData()"></button>
             <button class="right-arrow" [disabled]="disableNextButton" (click)="getDisplayedRows()"></button>
 
         </div>
